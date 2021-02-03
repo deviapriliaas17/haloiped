@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::post('admin/blog/create', 'Admin\BlogController@CreateBlog');
+Route::get('admin/blog/{id}', 'Admin\BlogController@getDataBlog');
+Route::post('admin/blog/category/create', 'Admin\BlogController@CreateCategory');
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
