@@ -8,7 +8,8 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 import VueRouter from 'vue-router';
-import VueAxios from 'axios';
+import axios from 'axios';
+import VueAxios from 'vue-axios';
 import App from './components/App.vue';
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
@@ -26,7 +27,7 @@ import 'sweetalert2/dist/sweetalert2.min.css';
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.use(VueRouter);
-Vue.use(VueAxios);
+Vue.use(VueAxios, axios);
 Vue.use(VueSweetalert2);
 
 /**
@@ -36,12 +37,19 @@ Vue.use(VueSweetalert2);
  */
 
 import AdminBlogCreate from './components/Admin/Blog/create.vue';
+import AdminBlogCategoryCreate from './components/Admin/Blog/CreateCategory.vue';
 
 const routes = [{
-    name: 'admin-blog-create',
-    path: '/admin/blog/create',
-    component: AdminBlogCreate
-}];
+        name: 'admin-blog-create',
+        path: '/admin/blog/create',
+        component: AdminBlogCreate,
+    },
+    {
+        name: 'admin-blog-category-blog',
+        path: '/admin/blog/category/create',
+        component: AdminBlogCategoryCreate
+    }
+];
 
 const router = new VueRouter({
     mode: 'history',
