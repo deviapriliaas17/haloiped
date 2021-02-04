@@ -37,7 +37,10 @@ Vue.use(VueSweetalert2);
  */
 
 import AdminBlogCreate from './components/Admin/Blog/create.vue';
+import AdminBlog from './components/Admin/Blog/index.vue';
 import AdminBlogCategoryCreate from './components/Admin/Blog/CreateCategory.vue';
+import AdminBlogCategory from './components/Admin/Blog/IndexCategory.vue';
+import AdminBlogCategoryEdit from './components/Admin/Blog/EditCategory.vue';
 
 const routes = [{
         name: 'admin-blog-create',
@@ -45,9 +48,24 @@ const routes = [{
         component: AdminBlogCreate,
     },
     {
-        name: 'admin-blog-category-blog',
+        name: 'admin-blog',
+        path: '/admin/blog',
+        component: AdminBlog,
+    },
+    {
+        name: 'admin-blog-category-create',
         path: '/admin/blog/category/create',
         component: AdminBlogCategoryCreate
+    },
+    {
+        name: 'admin-blog-category',
+        path: '/admin/blog/category',
+        component: AdminBlogCategory
+    },
+    {
+        name: 'admin-blog-category-edit',
+        path: '/admin/blog/category/edit/:id',
+        component: AdminBlogCategoryEdit
     }
 ];
 

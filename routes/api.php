@@ -21,6 +21,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::post('/admin/blog/create', 'Admin\BlogController@CreateBlog');
 Route::get('/admin/blog/{id}', 'Admin\BlogController@getDataBlog');
+Route::get('/admin/blog/category/{id}','Admin\BlogController@getDataCategory');
+Route::put('/admin/blog/category/edit/{id}','Admin\BlogController@EditCategory');
+Route::get('/admin/blog', 'Admin\BlogController@blogs');
 Route::post('/admin/blog/edit/{id}','Admin\BlogController@EditBlog');
 Route::post('/admin/blog/category/create', 'Admin\BlogController@CreateCategory');
 Route::get('/category', 'Admin\BlogController@categories');
+Route::get('/admin/blog/category/delete/{id}','Admin\BlogController@DeleteCategory');

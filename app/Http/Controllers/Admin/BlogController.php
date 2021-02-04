@@ -24,6 +24,25 @@ class BlogController extends Controller
         $blogs = blog::orderBy('id','DESC')->get();
         return $blogs->toJson();
     }
+    public function EditCategory(Request $request, $id)
+    {
+        $category  = category::find($id);
+        $validate = $request->validate([
+            'name' => ['required']
+        ]);
+
+        $category->update([
+            'name' => $validate['name']
+        ]);
+
+        return 'true';
+    }
+    public function DeleteCategory($id)
+    {
+        $category = category::find($id);
+        $category->delete();
+        return 'true';
+    }
     public function CreateBlog(Request $request)
     {
         
@@ -34,7 +53,7 @@ class BlogController extends Controller
             'image' => $image,
             'published_at' => $request->publish,
             'category_id' => $request->category_id,
-            'user_id' => Auth::user()->id,
+            'user_id' => Auth::user()->first->id,
             'slug' => str::slug($request->title,"-").rand(0,10000)
         ]);
         return 'true';

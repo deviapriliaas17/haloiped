@@ -12,7 +12,7 @@
                                Home
                            </li>
                            <li class="list-group-item">
-                               <router-link :to="{ name: 'admin-blog-create' }">Blog</router-link>
+                               <router-link :to="{ name: 'admin-blog' }">Blog</router-link>
                            </li>
                            <li class="list-group-item">
                                Gallery
