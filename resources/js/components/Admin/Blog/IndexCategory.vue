@@ -4,6 +4,7 @@
             Daftar Kategori 
         </div>
         <div class="card-body">
+            <router-link :to="{ name: 'admin-blog-category-create'}" class="btn btn-success mb-2"> Menambahkan Kategori </router-link>
             <div>
                 <table class="table">
                     <thead class="bg-dark text-white">
@@ -17,7 +18,7 @@
                             <td>{{ category.name }}</td>
                             <td>
                                 <router-link :to="{ name: 'admin-blog-category-edit', params: { id: category.id} }" class="btn btn-info mb-2">Edit</router-link>
-                                <a href="javascript:;" v-on:click="DeleteCategory(category.id, index)" class="btn btn-danger text-white">Hapus</a>
+                                <a href="javascript:;" @click="DeleteCategory(category.id)" class="btn btn-danger text-white mb-2">Hapus</a>
                             </td>
                         </tr>
                     </tbody>
@@ -41,11 +42,31 @@ export default {
         })
     },
     methods:{
-        DeleteCategory(id, index){
-            this.axios.get('/api/admin/blog/category/delete/'+id).then((response) => {
-                this.$swal.fire("Berhasil");
-                this.$router.push({ name : 'admin-blog'});
-            })
+        DeleteCategory(id){
+            this.$swal.fire({
+                title : 'Apakah Kamu Yakin?',
+                text : 'Jika di Hapus Maka Akan Menghapus Artikel yang Memiliki Kategori Ini Sekaligus',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor:'#d33',
+                confirmButtonText:'Hapus',
+                cancelButtonText:'Batalkan'
+            }).then((result) => {
+                if(result.value){
+                    this.$swal.fire({
+                        title: 'Berhasil',
+                        text:'Berhasil Menghapus',
+                        icon : 'success',
+                        timer:1000
+                    });
+                    let uri = `/api/admin/blog/category/delete/${id}`;
+                    this.axios.delete(uri).then(response => {
+                        this.categories.splice(this.categories.indexOf(id), 1);
+                    }); 
+                    console.log('Success');
+                }
+            }) 
         }
     }
 }

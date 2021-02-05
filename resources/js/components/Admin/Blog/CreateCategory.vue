@@ -27,6 +27,7 @@ export default {
             let uri = `/api/admin/blog/category/create`;
             this.axios.post(uri, this.category).then((response) => {
                 this.$swal.fire("Berhasil")
+                this.$router.push({'name' : 'admin-blog-category'})
             })
         }
     }

@@ -9,4 +9,14 @@ class blog extends Model
     protected $fillable = [
         'title','content','image','published_at','slug','user_id','category_id'
     ];
+
+    public function category()
+    {
+        return $this->belongsTo('App\blogcategory','category_id');
+    }
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
 }

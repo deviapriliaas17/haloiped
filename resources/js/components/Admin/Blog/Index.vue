@@ -12,6 +12,7 @@
                         <th>No</th>
                         <th>Title</th>
                         <th>Image</th>
+                        <th>Category</th>
                         <th>Action</th>
                     </thead>
                     <tbody>
@@ -19,7 +20,10 @@
                             <td>{{ index + 1}}</td>
                             <td>{{ blog.title }}</td>
                             <td><img :src="'/uploads/uploads/'+blog.image" alt="" class="img-fluid"></td>
-                            <td>Action</td>
+                            <td>{{ blog.category.name }}</td>
+                            <td>
+                                <router-link :to="{ name: 'admin-blog-detail', params : { id : blog.id}}" class="btn btn-info"> Detail</router-link>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

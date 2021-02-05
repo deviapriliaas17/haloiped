@@ -17,6 +17,9 @@
                            <li class="list-group-item">
                                Gallery
                            </li>
+                           <li class="list-group-item">
+                               <router-link :to="{ name : 'admin-layout-home'}">Layout</router-link>
+                           </li>
                        </ul>
                    </div>
                </div>

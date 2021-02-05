@@ -41,6 +41,8 @@ import AdminBlog from './components/Admin/Blog/index.vue';
 import AdminBlogCategoryCreate from './components/Admin/Blog/CreateCategory.vue';
 import AdminBlogCategory from './components/Admin/Blog/IndexCategory.vue';
 import AdminBlogCategoryEdit from './components/Admin/Blog/EditCategory.vue';
+import AdminBlogDetail from './components/Admin/Blog/Show.vue';
+import AdminLayoutHome from './components/Admin/Layout/Home.vue';
 
 const routes = [{
         name: 'admin-blog-create',
@@ -51,6 +53,11 @@ const routes = [{
         name: 'admin-blog',
         path: '/admin/blog',
         component: AdminBlog,
+    },
+    {
+        name: 'admin-blog-detail',
+        path: '/admin/blog/:id',
+        component: AdminBlogDetail,
     },
     {
         name: 'admin-blog-category-create',
@@ -66,6 +73,11 @@ const routes = [{
         name: 'admin-blog-category-edit',
         path: '/admin/blog/category/edit/:id',
         component: AdminBlogCategoryEdit
+    },
+    {
+        name: 'admin-layout-home',
+        path: '/admin/layout/home',
+        component: AdminLayoutHome
     }
 ];
 

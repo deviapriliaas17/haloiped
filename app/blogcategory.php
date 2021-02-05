@@ -11,4 +11,9 @@ class blogcategory extends Model
         'name'
     ];
     public $timestamps = false;
+
+    public function blog()
+    {
+        return $this->hasOne('App\blog','category_id','id');
+    }
 }

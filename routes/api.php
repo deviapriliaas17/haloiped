@@ -27,4 +27,6 @@ Route::get('/admin/blog', 'Admin\BlogController@blogs');
 Route::post('/admin/blog/edit/{id}','Admin\BlogController@EditBlog');
 Route::post('/admin/blog/category/create', 'Admin\BlogController@CreateCategory');
 Route::get('/category', 'Admin\BlogController@categories');
-Route::get('/admin/blog/category/delete/{id}','Admin\BlogController@DeleteCategory');
+Route::delete('/admin/blog/category/delete/{id}','Admin\BlogController@DeleteCategory');
+
+Route::post('/admin/layout/home/edit','HomePageController@edit');

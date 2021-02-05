@@ -21,8 +21,9 @@ class BlogController extends Controller
     }
     public function blogs()
     {
-        $blogs = blog::orderBy('id','DESC')->get();
-        return $blogs->toJson();
+        // $blogs = blog::orderBy('id','DESC')->get();
+        $blogs = blog::with('category')->orderBy('id','DESC')->get();
+        return response()->json($blogs,200);
     }
     public function EditCategory(Request $request, $id)
     {
@@ -35,13 +36,18 @@ class BlogController extends Controller
             'name' => $validate['name']
         ]);
 
-        return 'true';
+        return response()->json([
+            'message' => 'success'
+        ], 200);
     }
     public function DeleteCategory($id)
     {
         $category = category::find($id);
         $category->delete();
-        return 'true';
+
+        return response()->json([
+            'message' => 'success'
+        ], 200);
     }
     public function CreateBlog(Request $request)
     {
@@ -56,7 +62,10 @@ class BlogController extends Controller
             'user_id' => Auth::user()->first->id,
             'slug' => str::slug($request->title,"-").rand(0,10000)
         ]);
-        return 'true';
+
+        return response()->json([
+            'message' => 'success'
+        ], 200);
     }
     public function EditBlog(Request $request, $id)
     {
@@ -85,17 +94,24 @@ class BlogController extends Controller
                 'slug' => str::slug($request->title,"-").rand(0,10000) 
             ]);
         }
-        return 'true';
+
+        return response()->json([
+            'message' => 'success'
+        ], 200);
     }
     public function getDataBlog($id)
     {
-        $blog = blog::find($id);
-        return response()->json($blog);
+        $blog = blog::with('category')->find($id);
+        $media = media::where('image','like',$blog->image)->first();
+        return response()->json([
+            'blog' => $blog,
+            'media' => $media
+        ], 200);
     }
     public function getDataCategory($id)
     {
         $category = category::find($id);
-        return response()->json($category);
+        return response()->json($category,200);
     }
     public function CreateCategory(Request $request)
     {
@@ -106,7 +122,9 @@ class BlogController extends Controller
             'name' => $validate['name']
         ]);
 
-        return 'true';
+        return response()->json([
+            'message' => 'success'
+        ], 200);
     }
     public function saveImage($image)
     {
