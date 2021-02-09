@@ -30,3 +30,4 @@ Route::get('/category', 'Admin\BlogController@categories');
 Route::delete('/admin/blog/category/delete/{id}','Admin\BlogController@DeleteCategory');
 
 Route::post('/admin/layout/home/edit','HomePageController@edit');
+Route::get('/admin/layout/home','HomePageController@index');

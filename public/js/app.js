@@ -2349,15 +2349,23 @@ __webpack_require__.r(__webpack_exports__);
       datas: {}
     };
   },
+  created: function created() {
+    var _this = this;
+
+    var uri = "/api/admin/layout/home";
+    this.axios.get(uri).then(function (response) {
+      _this.datas = response.data;
+    });
+  },
   methods: {
     Home: function Home() {
-      var _this = this;
+      var _this2 = this;
 
       var uri = "/api/admin/layout/home/edit";
       this.axios.post(uri, this.datas).then(function (response) {
-        _this.$swal.fire("Berhasil");
+        _this2.$swal.fire("Berhasil");
 
-        _this.$router.push({
+        _this2.$router.push({
           name: 'admin-layout-home'
         });
       });

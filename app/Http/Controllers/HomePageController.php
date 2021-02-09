@@ -7,6 +7,18 @@ use App\HomePage as Home;
 
 class HomePageController extends Controller
 {
+    public function index()
+    {
+        $home = Home::first();
+        if($home == null){
+            return response()->json([
+                'message' => null
+            ], 204);
+        }
+        else{
+            return response()->json($home,200);
+        }
+    }
     public function edit(Request $request)
     {
         $home = Home::first();

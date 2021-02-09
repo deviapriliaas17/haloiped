@@ -54,6 +54,12 @@ export default {
             datas:{},
         }
     },
+    created(){
+        let uri = `/api/admin/layout/home`;
+        this.axios.get(uri).then((response) => {
+            this.datas = response.data;
+        });
+    },
     methods:{
         Home(){
             let uri = `/api/admin/layout/home/edit`;
