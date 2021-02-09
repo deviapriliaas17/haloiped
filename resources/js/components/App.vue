@@ -18,7 +18,11 @@
                                Gallery
                            </li>
                            <li class="list-group-item">
-                               <router-link :to="{ name : 'admin-layout-home'}">Layout</router-link>
+                               Layout
+                               <ul class="list-group">
+                                   <li class="list-group-item"><router-link :to="{ name : 'admin-layout-home'}">Home</router-link></li>
+                                   <li class="list-group-item"><router-link :to="{ name : 'admin-layout-about'}">About</router-link></li>
+                               </ul>
                            </li>
                        </ul>
                    </div>

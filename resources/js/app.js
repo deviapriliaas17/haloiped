@@ -43,6 +43,7 @@ import AdminBlogCategory from './components/Admin/Blog/IndexCategory.vue';
 import AdminBlogCategoryEdit from './components/Admin/Blog/EditCategory.vue';
 import AdminBlogDetail from './components/Admin/Blog/Show.vue';
 import AdminLayoutHome from './components/Admin/Layout/Home.vue';
+import AdminLayoutAbout from './components/Admin/Layout/About.vue';
 
 const routes = [{
         name: 'admin-blog-create',
@@ -78,6 +79,11 @@ const routes = [{
         name: 'admin-layout-home',
         path: '/admin/layout/home',
         component: AdminLayoutHome
+    },
+    {
+        name: 'admin-layout-about',
+        path: '/admin/layout/about',
+        component: AdminLayoutAbout
     }
 ];
 

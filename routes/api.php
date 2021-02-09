@@ -31,3 +31,6 @@ Route::delete('/admin/blog/category/delete/{id}','Admin\BlogController@DeleteCat
 
 Route::post('/admin/layout/home/edit','HomePageController@edit');
 Route::get('/admin/layout/home','HomePageController@index');
+
+Route::post('/admin/layout/about/edit','AboutPageController@edit');
+Route::post('/admin/layout/contact/edit','ContactPageController@edit');
