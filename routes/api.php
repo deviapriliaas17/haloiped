@@ -34,3 +34,7 @@ Route::get('/admin/layout/home','HomePageController@index');
 
 Route::post('/admin/layout/about/edit','AboutPageController@edit');
 Route::post('/admin/layout/contact/edit','ContactPageController@edit');
+Route::post('/admin/layout/blog/edit','BlogPageController@edit');
+Route::post('/admin/layout/portfolio/edit','PortfolioPageController@edit');
+
+Route::get('/admin/layout/about','AboutPageController@index');

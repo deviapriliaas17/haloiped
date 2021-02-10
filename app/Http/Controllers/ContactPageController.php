@@ -20,8 +20,8 @@ class ContactPageController extends Controller
         if($contact == null){
 
             $contact = new contact();
-            if($request->file('image')){
-                $image = $this->MediaController->saveImage($request->image,'contact');
+            if($request->file('section_1_image')){
+                $image = $this->MediaController->saveImage($request->file('section_1_image'),'contact');
                 $contact = new contact();
                 $data['section_1_image'] = $image;
                 $contact->fill($data)->save();
@@ -29,8 +29,8 @@ class ContactPageController extends Controller
                $contact->fill($data)->save(); 
             }
         }else{
-            if($request->file('image')){
-                $image = $this->MediaController->saveImage($request->image,'contact');
+            if($request->file('section_1_image')){
+                $image = $this->MediaController->saveImage($request->file('section_1_image'),'contact');
                 $data['section_1_image'] = $image;
                 $contact->fill($data)->update();
             }else{

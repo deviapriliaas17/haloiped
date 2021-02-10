@@ -12,39 +12,43 @@ class AboutPageController extends Controller
     {
         $this->MediaController = $MediaController;
     }
+    public function index()
+    {
+        $about = about::first();
+        return response()->json($about,200);
+    }
     public function edit(Request $request)
     {
         $about = about::first();
-        $image_1 = $this->MediaController->saveImage($request->file('image_1'),'about');
-        $icon_1 = $this->MediaController->saveImage($request->file('icon_1'),'about');
-        $icon_2 = $this->MediaController->saveImage($request->file('icon_2'),'about');
-        $icon_3 = $this->MediaController->saveImage($request->file('icon_3'),'about');
-        $image_3 = $this->MediaController->saveImage($request->file('image_3'),'about');
+        $data = $request->all();
+        $image_1 = $this->MediaController->saveImage($request->file('section_1_image'),'about');
+        $icon_1 = $this->MediaController->saveImage($request->file('section_2_icon_1'),'about');
+        $icon_2 = $this->MediaController->saveImage($request->file('section_2_icon_2'),'about');
+        $icon_3 = $this->MediaController->saveImage($request->file('section_2_icon_3'),'about');
+        $image_3 = $this->MediaController->saveImage($request->file('section_3_image'),'about');
+        if($request->section_1_image){
+            $data['section_1_image'] = $image_1;
+        }
+        if($request->section_1_icon_1){
+            $data['section_2_icon_1'] = $icon_1;
+        }
+        if($request->section_1_icon_2){
+            $data['section_2_icon_2'] = $icon_2;
+        }
+        if($request->section_1_icon_3){
+            $data['section_2_icon_3'] = $icon_2;
+        }
+        if($request->section_3_image){
+            $data['section_3_image'] = $image_3;
+        }
+
         if($about == null)
         {
             $about = new about();
-            $data = $request->all();
-            if($request->section_1_image){
-                $data['section_1_image'] = $image_1;
-            }
-            if($request->section_1_icon_1){
-                $data['section_2_icon_1'] = $icon_1;
-            }
-            if($request->section_1_icon_2){
-                $data['section_2_icon_2'] = $icon_2;
-            }
-            if($request->section_1_icon_2){
-                $data['section_2_icon_3'] = $icon_2;
-            }
-            if($request->section_1_icon_2){
-                $data['section_3_image'] = $image_3;
-            }
             $about->fill($data)->save();
         }
         else{
-            if($request->file){
-                $about->fill($data)->update;
-            }
+            $about->fill($data)->update();
         }
         return response()->json([
             'message' => 'Success'
