@@ -49,6 +49,12 @@ export default {
             }
         }
     },
+    created(){
+        let uri = `/api/admin/layout/contact`;
+        this.axios.get(uri).then((response) => {
+            this.contact = response.data;
+        });
+    },
     methods:{
         image1(event){
             this.contact.section_1_image = event.target.files[0];

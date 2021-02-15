@@ -15,6 +15,9 @@
                                <router-link :to="{ name: 'admin-blog' }">Blog</router-link>
                            </li>
                            <li class="list-group-item">
+                               <router-link :to="{ name: 'admin-portfolio' }">Portfolio</router-link>
+                           </li>
+                           <li class="list-group-item">
                                Gallery
                            </li>
                            <li class="list-group-item">

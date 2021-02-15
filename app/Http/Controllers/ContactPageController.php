@@ -12,6 +12,11 @@ class ContactPageController extends Controller
         $this->MediaController = $MediaController;
     }
 
+    public function getData()
+    {
+        $contact = contact::find(1);
+        return response()->json($contact);
+    }
     public function edit(Request $request)
     {
         $data = $request->all();

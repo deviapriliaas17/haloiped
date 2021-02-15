@@ -46,6 +46,8 @@ import AdminLayoutHome from './components/Admin/Layout/Home.vue';
 import AdminLayoutAbout from './components/Admin/Layout/About.vue';
 import AdminLayoutContact from './components/Admin/Layout/Contact.vue';
 import AdminLayoutBlog from './components/Admin/Layout/Blog.vue';
+import AdminPortfolio from './components/Admin/Portfolio/Index.vue';
+import AdminPortfolioCreate from './components/Admin/Portfolio/Create.vue';
 
 const routes = [{
         name: 'admin-blog-create',
@@ -91,6 +93,16 @@ const routes = [{
         name: 'admin-layout-contact',
         path: '/admin/layout/contact',
         component: AdminLayoutContact,
+    },
+    {
+        name: 'admin-portfolio',
+        path: '/admin/portfolio',
+        component: AdminPortfolio,
+    },
+    {
+        name: 'admin-portfolio-create',
+        path: '/admin/portfolio/create',
+        component: AdminPortfolioCreate,
     }
 ];
 
