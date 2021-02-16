@@ -51,6 +51,21 @@ import AdminPortfolio from './components/Admin/Portfolio/Index.vue';
 import AdminPortfolioCreate from './components/Admin/Portfolio/Create.vue';
 import AdminPortfolioEdit from './components/Admin/Portfolio/Edit.vue';
 
+Vue.component(
+    'passport-clients',
+    require('./components/passport/Clients.vue').default
+);
+
+Vue.component(
+    'passport-authorized-clients',
+    require('./components/passport/AuthorizedClients.vue').default
+);
+
+Vue.component(
+    'passport-personal-access-tokens',
+    require('./components/passport/PersonalAccessTokens.vue').default
+);
+
 const routes = [{
         name: 'admin-blog-create',
         path: '/admin/blog/create',
