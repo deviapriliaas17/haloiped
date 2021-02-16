@@ -12,16 +12,23 @@ class PortfolioPageController extends Controller
         $this->MediaController = $MediaController;
     }
 
+    public function getData()
+    {
+        $portfolio = portfolio::first();
+        return response()->json($portfolio);
+    }
+
     public function edit(Request $request)
     {
         $data = $request->all();
         $portfolio = portfolio::first();
+        
 
         if($portfolio == null){
 
             $portfolio = new portfolio();
-            if($request->file('image')){
-                $image = $this->MediaController->saveImage($request->image,'portfolio');
+            if($request->file('section_1_image')){
+                $image = $this->MediaController->saveImage($request->section_1_image,'portfolio');
                 $portfolio = new portfolio();
                 $data['section_1_image'] = $image;
                 $portfolio->fill($data)->save();
@@ -29,8 +36,8 @@ class PortfolioPageController extends Controller
                $portfolio->fill($data)->save(); 
             }
         }else{
-            if($request->file('image')){
-                $image = $this->MediaController->saveImage($request->image,'portfolio');
+            if($request->file('section_1_image')){
+                $image = $this->MediaController->saveImage($request->section_1_image,'portfolio');
                 $data['section_1_image'] = $image;
                 $portfolio->fill($data)->update();
             }else{

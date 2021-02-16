@@ -12,7 +12,7 @@ class PortfolioController extends Controller
     {
         $this->MediaController = $MediaController;
     }
-    public function getData()
+    public function getData($id)
     {
         $portfolio = portfolio::find($id);
         return response()->json($portfolio);
@@ -36,7 +36,7 @@ class PortfolioController extends Controller
             'message' => 'success'
         ]);
     }
-    public function edit(Request $request)
+    public function edit(Request $request, $id)
     {
         $portfolio = portfolio::find($id);
         $data = $request->all();
