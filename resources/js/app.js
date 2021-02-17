@@ -50,6 +50,7 @@ import AdminLayoutPortfolio from './components/Admin/Layout/Portfolio.vue';
 import AdminPortfolio from './components/Admin/Portfolio/Index.vue';
 import AdminPortfolioCreate from './components/Admin/Portfolio/Create.vue';
 import AdminPortfolioEdit from './components/Admin/Portfolio/Edit.vue';
+import AdminProfile from './components/Admin/MyProfile.vue';
 
 Vue.component(
     'passport-clients',
@@ -67,6 +68,11 @@ Vue.component(
 );
 
 const routes = [{
+        name: 'admin-profile',
+        path: '/admin/profile/edit',
+        component: AdminProfile
+    },
+    {
         name: 'admin-blog-create',
         path: '/admin/blog/create',
         component: AdminBlogCreate,

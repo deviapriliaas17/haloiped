@@ -20,6 +20,9 @@
                <div class="form-group">
                    <label for="">Image 1</label>
                    <input type="file"  class="form-control" @change="image1">
+                   <img v-if="contact.section_1_image" :src="'/uploads/uploads/' + contact.section_1_image" alt="" class="img-thumbnail">
+                   <p v-if="url" class="mt-2">Upload Terbaru</p>
+                   <img v-if="url" :src="url" alt="" class="img-thumbnail">
                </div>
                <div class="form-group">
                    <label for="">Title 2</label>
@@ -46,7 +49,9 @@ export default {
                 secton_1_image:'',
                 section_2_title:'',
                 section_2_description:'',
-            }
+            },
+            url:'',
+            newImage:'',
         }
     },
     created(){
@@ -57,7 +62,9 @@ export default {
     },
     methods:{
         image1(event){
-            this.contact.section_1_image = event.target.files[0];
+            let file =  event.target.files[0]
+            this.url =URL.createObjectURL(file);
+            this.newImage =  event.target.files[0]
         },
         UpdateContact(){
             let uri = '/api/admin/layout/contact/edit';
@@ -65,7 +72,7 @@ export default {
             formData.append("section_1_header", this.contact.section_1_header);
             formData.append("section_1_title", this.contact.section_1_title);
             formData.append("section_1_description", this.contact.section_1_description);
-            formData.append("section_1_image", this.contact.section_1_image);
+            formData.append("section_1_image", this.newImage);
             formData.append("section_2_title", this.contact.section_2_title);
             formData.append("section_2_description", this.contact.section_2_description);
 
