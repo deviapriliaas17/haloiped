@@ -46,3 +46,5 @@ Route::get('/admin/portfolio','PortfolioController@index');
 Route::get('/admin/portfolio/{id}','PortfolioController@getData');
 Route::post('/admin/portfolio/create','PortfolioController@store');
 Route::post('/admin/portfolio/edit/{id}','PortfolioController@edit');
+
+Route::post('register','AuthController@register');
