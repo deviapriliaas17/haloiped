@@ -3069,6 +3069,7 @@ __webpack_require__.r(__webpack_exports__);
 
       var uri = "/api/profile/edit";
       var formData = new FormData();
+      formData.append("name", this.form.name);
       formData.append("short_name", this.form.short_name);
       formData.append("email", this.form.email);
       formData.append("phone_number", this.form.phone_number);
@@ -3082,6 +3083,8 @@ __webpack_require__.r(__webpack_exports__);
       formData.append("whatsapp_link", this.form.whatsapp_link);
       formData.append("image", this.newImage);
       this.axios.post(uri, formData).then(function (response) {
+        location.reload();
+
         _this2.$swal.fire("Berhasil");
       });
     }

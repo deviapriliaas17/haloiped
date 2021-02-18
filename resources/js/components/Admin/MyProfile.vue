@@ -120,6 +120,7 @@ export default {
         ProfileUpdate(){
             let uri = `/api/profile/edit`;
             let formData = new FormData();
+            formData.append("name", this.form.name);
             formData.append("short_name", this.form.short_name);
             formData.append("email", this.form.email);
             formData.append("phone_number", this.form.phone_number);
@@ -134,6 +135,7 @@ export default {
             formData.append("image", this.newImage);
 
             this.axios.post(uri, formData).then((response) => {
+                location.reload();
                 this.$swal.fire("Berhasil");
             })
         }

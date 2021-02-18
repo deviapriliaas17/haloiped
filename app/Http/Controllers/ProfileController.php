@@ -18,6 +18,7 @@ class ProfileController extends Controller
         $id_profile = profile::whereHas('user', function($q) {
             $q->where('user_id',auth()->user()->id);
         })->pluck('id')->first();
+        $auth = auth()->user()->id;
 
         if(empty($id_profile)){
             $profile = new profile();
@@ -36,6 +37,11 @@ class ProfileController extends Controller
             }
             $profile->fill($data)->update();
         }
+       
+        $user = user::find($auth);
+        $user->name = $request->name;
+        $user->save();
+        
         return response()->json([
             'message' => 'success'
         ], 200);
