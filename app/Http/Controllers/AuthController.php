@@ -23,7 +23,8 @@ class AuthController extends Controller
         $user = User::create($validation);
         $token = $user->createToken('authToken')->accessToken;
 
-        return response()->json(['user' => $user, 'access_token' => $token]);
+        // return response()->json(['user' => $user, 'access_token' => $token]);
+        return redirect()->to('home');
     }
     public function login(Request $request){
         
@@ -39,9 +40,10 @@ class AuthController extends Controller
         }
         $token = auth()->user()->createToken('authToken')->accessToken;
 
-        return response()->json([
-            'user' => auth()->user(),
-            'token' => $token,
-        ]);
+        // return response()->json([
+        //     'user' => auth()->user(),
+        //     'token' => $token,
+        // ]);
+        return redirect()->to('home');
     }
 }

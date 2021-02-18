@@ -18,6 +18,7 @@ class ProfileController extends Controller
         $id_profile = profile::whereHas('user', function($q) {
             $q->where('user_id',auth()->user()->id);
         })->pluck('id')->first();
+
         if(empty($id_profile)){
             $profile = new profile();
             $data = $request->all();
@@ -42,13 +43,14 @@ class ProfileController extends Controller
 
     public function getData()
     {
-        $profile = auth()->user();
+        $profile = profile::with('user')->whereHas('user', function($q) {
+            $q->where('user_id',auth()->user()->id);
+        })->first();
         if(empty($profile)){
-            $profile = "Sorry, there's no data";
+            return response()->json([
+                'message' => 'Failed',
+            ]);
         }
-        return response()->json([
-            'message' => 'success',
-            'user' => $profile
-        ]);
+        return response()->json($profile);
     }
 }
