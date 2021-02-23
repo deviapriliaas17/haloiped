@@ -49,4 +49,9 @@ Route::get('/admin/portfolio/{id}','PortfolioController@getData');
 Route::post('/admin/portfolio/create','PortfolioController@store');
 Route::post('/admin/portfolio/edit/{id}','PortfolioController@edit');
 
+Route::get('/admin/skill','SkillController@index');
+Route::get('/admin/skill/{id}','SkillController@getData');
+Route::post('/admin/skill/edit/{id}','SkillController@update');
+Route::post('/admin/skill/create','SkillController@store');
+
 

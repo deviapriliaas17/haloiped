@@ -51,6 +51,9 @@ import AdminPortfolio from './components/Admin/Portfolio/Index.vue';
 import AdminPortfolioCreate from './components/Admin/Portfolio/Create.vue';
 import AdminPortfolioEdit from './components/Admin/Portfolio/Edit.vue';
 import AdminProfile from './components/Admin/MyProfile.vue';
+import AdminSkillCreate from './components/Admin/Skill/Create.vue';
+import AdminSkillIndex from './components/Admin/Skill/Index.vue';
+import AdminSkillEdit from './components/Admin/Skill/Edit.vue';
 
 Vue.component(
     'passport-clients',
@@ -141,7 +144,22 @@ const routes = [{
         name: 'admin-portfolio-edit',
         path: '/admin/portfolio/edit/:id',
         component: AdminPortfolioEdit,
-    }
+    },
+    {
+        name: 'admin-skill-create',
+        path: '/admin/skill/create',
+        component: AdminSkillCreate,
+    },
+    {
+        name: 'admin-skill',
+        path: '/admin/skill',
+        component: AdminSkillIndex,
+    },
+    {
+        name: 'admin-skill-edit',
+        path: '/admin/skill/edit/:id',
+        component: AdminSkillEdit,
+    },
 ];
 
 const router = new VueRouter({
