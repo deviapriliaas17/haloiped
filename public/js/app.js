@@ -2787,10 +2787,173 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      datas: {}
+      datas: {
+        description: '',
+        keyphrase: '',
+        title: '',
+        section_1_title: '',
+        section_1_header: '',
+        section_1_image: '',
+        section_1_button_1: '',
+        section_1_link_1: '',
+        section_1_button_2: '',
+        section_1_link_2: '',
+        section_2_title: '',
+        section_2_header: '',
+        section_2_small_title: '',
+        section_2_image: '',
+        section_3_title: '',
+        section_3_header: '',
+        section_3_text_1: '',
+        section_3_number_1: '',
+        section_3_text_2: '',
+        section_3_number_2: '',
+        section_3_text_3: '',
+        section_3_number_3: '',
+        section_3_text_4: '',
+        section_3_number_4: '',
+        section_4_title: '',
+        section_4_header: '',
+        section_5_title: '',
+        section_5_header: '',
+        section_5_image: ''
+      },
+      newImage1: '',
+      newImage2: '',
+      newImage5: '',
+      url1: '',
+      url2: '',
+      url5: ''
     };
   },
   created: function created() {
@@ -2806,13 +2969,55 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       var uri = "/api/admin/layout/home/edit";
-      this.axios.post(uri, this.datas).then(function (response) {
-        _this2.$swal.fire("Berhasil");
+      var formData = new FormData();
+      formData.append("description", this.datas.description);
+      formData.append("keyphrase", this.datas.keyphrase);
+      formData.append("title", this.datas.title);
+      formData.append("section_1_title", this.datas.section_1_title);
+      formData.append("section_1_header", this.datas.section_1_header);
+      formData.append("section_1_image", this.newImage1);
+      formData.append("section_1_button_1", this.datas.section_1_button_1);
+      formData.append("section_1_link_1", this.datas.section_1_link_1);
+      formData.append("section_1_button_2", this.datas.section_1_button_2);
+      formData.append("section_1_link_2", this.datas.section_1_link_2);
+      formData.append("section_2_title", this.datas.section_2_title);
+      formData.append("section_2_header", this.datas.section_2_header);
+      formData.append("section_2_small_title", this.datas.section_2_small_title);
+      formData.append("section_2_image", this.newImage2);
+      formData.append("section_3_title", this.datas.section_3_title);
+      formData.append("section_3_header", this.datas.section_3_header);
+      formData.append("section_3_text_1", this.datas.section_3_text_1);
+      formData.append("section_3_number_1", this.datas.section_3_number_1);
+      formData.append("section_3_text_2", this.datas.section_3_text_2);
+      formData.append("section_3_number_2", this.datas.section_3_number_2);
+      formData.append("section_3_text_3", this.datas.section_3_text_3);
+      formData.append("section_3_number_3", this.datas.section_3_number_3);
+      formData.append("section_3_text_4", this.datas.section_3_text_4);
+      formData.append("section_3_number_4", this.datas.section_3_number_4);
+      formData.append("section_4_title", this.datas.section_4_title);
+      formData.append("section_4_header", this.datas.section_4_header);
+      formData.append("section_5_title", this.datas.section_5_title);
+      formData.append("section_5_header", this.datas.section_5_header);
+      formData.append("section_5_image", this.newImage5);
+      this.axios.post(uri, formData).then(function (response) {
+        _this2.$swal.fire("Berhasil"); // location.reload();
 
-        _this2.$router.push({
-          name: 'admin-layout-home'
-        });
       });
+    },
+    ChangeImage1: function ChangeImage1(e) {
+      var file = e.target.files[0];
+      this.url1 = URL.createObjectURL(file);
+      this.newImage1 = file;
+    },
+    ChangeImage2: function ChangeImage2(e) {
+      var file = e.target.files[0];
+      this.url2 = URL.createObjectURL(file);
+      this.newImage2 = file;
+    },
+    ChangeImage5: function ChangeImage5(e) {
+      var file = e.target.files[0];
+      this.url5 = URL.createObjectURL(file);
+      this.newImage5 = file;
     }
   }
 });
@@ -46245,6 +46450,35 @@ var render = function() {
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("Section 1 Image")]),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "file" },
+              on: { change: _vm.ChangeImage1 }
+            }),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "img-thumbnail",
+              attrs: {
+                src: "/uploads/uploads/" + _vm.datas.section_1_image,
+                alt: ""
+              }
+            }),
+            _vm._v(" "),
+            _vm.url1
+              ? _c("p", { staticClass: "mt-2" }, [_vm._v("Upload Terbaru")])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.url1
+              ? _c("img", {
+                  staticClass: "img-thumbnail mt-2",
+                  attrs: { src: _vm.url1, alt: "" }
+                })
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
             _c("label", { attrs: { for: "" } }, [_vm._v("Section Button 1 ")]),
             _vm._v(" "),
             _c("input", {
@@ -46348,6 +46582,624 @@ var render = function() {
                 }
               }
             })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("Section 2 Title")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.datas.section_2_title,
+                  expression: "datas.section_2_title"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { type: "text" },
+              domProps: { value: _vm.datas.section_2_title },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.datas, "section_2_title", $event.target.value)
+                }
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("Section 2 Header")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.datas.section_2_header,
+                  expression: "datas.section_2_header"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { type: "text" },
+              domProps: { value: _vm.datas.section_2_header },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.datas, "section_2_header", $event.target.value)
+                }
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "" } }, [
+              _vm._v("Section 2 Small Title")
+            ]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.datas.section_2_small_title,
+                  expression: "datas.section_2_small_title"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { type: "text" },
+              domProps: { value: _vm.datas.section_2_small_title },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(
+                    _vm.datas,
+                    "section_2_small_title",
+                    $event.target.value
+                  )
+                }
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("Section 2 Image")]),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "file" },
+              on: { change: _vm.ChangeImage2 }
+            }),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "img-thumbnail",
+              attrs: {
+                src: "/uploads/uploads/" + _vm.datas.section_2_image,
+                alt: ""
+              }
+            }),
+            _vm._v(" "),
+            _vm.url2
+              ? _c("p", { staticClass: "mt-2" }, [_vm._v("Upload Terbaru")])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.url2
+              ? _c("img", {
+                  staticClass: "img-thumbnail mt-2",
+                  attrs: { src: _vm.url2, alt: "" }
+                })
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("Section 3 Title")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.datas.section_3_title,
+                  expression: "datas.section_3_title"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { type: "text" },
+              domProps: { value: _vm.datas.section_3_title },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.datas, "section_3_title", $event.target.value)
+                }
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("Section 3 Header")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.datas.section_3_header,
+                  expression: "datas.section_3_header"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { type: "text" },
+              domProps: { value: _vm.datas.section_3_header },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.datas, "section_3_header", $event.target.value)
+                }
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-6" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "" } }, [
+                  _vm._v("Section 3 Text 1")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.datas.section_3_text_1,
+                      expression: "datas.section_3_text_1"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.datas.section_3_text_1 },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.datas,
+                        "section_3_text_1",
+                        $event.target.value
+                      )
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-6" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "" } }, [
+                  _vm._v("Section 3 Number 1")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.datas.section_3_number_1,
+                      expression: "datas.section_3_number_1"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.datas.section_3_number_1 },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.datas,
+                        "section_3_number_1",
+                        $event.target.value
+                      )
+                    }
+                  }
+                })
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-6" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "" } }, [
+                  _vm._v("Section 3 Text 2")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.datas.section_3_text_2,
+                      expression: "datas.section_3_text_2"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.datas.section_3_text_2 },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.datas,
+                        "section_3_text_2",
+                        $event.target.value
+                      )
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-6" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "" } }, [
+                  _vm._v("Section 3 Number 2")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.datas.section_3_number_2,
+                      expression: "datas.section_3_number_2"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.datas.section_3_number_2 },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.datas,
+                        "section_3_number_2",
+                        $event.target.value
+                      )
+                    }
+                  }
+                })
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-6" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "" } }, [
+                  _vm._v("Section 3 Text 3")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.datas.section_3_text_3,
+                      expression: "datas.section_3_text_3"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.datas.section_3_text_3 },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.datas,
+                        "section_3_text_3",
+                        $event.target.value
+                      )
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-6" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "" } }, [
+                  _vm._v("Section 3 Number 3")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.datas.section_3_number_3,
+                      expression: "datas.section_3_number_3"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.datas.section_3_number_3 },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.datas,
+                        "section_3_number_3",
+                        $event.target.value
+                      )
+                    }
+                  }
+                })
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-6" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "" } }, [
+                  _vm._v("Section 3 Text 4")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.datas.section_3_text_4,
+                      expression: "datas.section_3_text_4"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.datas.section_3_text_4 },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.datas,
+                        "section_3_text_4",
+                        $event.target.value
+                      )
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-6" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "" } }, [
+                  _vm._v("Section 3 Number 4")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.datas.section_3_number_4,
+                      expression: "datas.section_3_number_4"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.datas.section_3_number_4 },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.datas,
+                        "section_3_number_4",
+                        $event.target.value
+                      )
+                    }
+                  }
+                })
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-6" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "" } }, [
+                  _vm._v("Section 4 Title")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.datas.section_4_title,
+                      expression: "datas.section_4_title"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.datas.section_4_title },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.datas,
+                        "section_4_title",
+                        $event.target.value
+                      )
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-6" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "" } }, [
+                  _vm._v("Section 4 Header")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.datas.section_4_header,
+                      expression: "datas.section_4_header"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.datas.section_4_header },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.datas,
+                        "section_4_header",
+                        $event.target.value
+                      )
+                    }
+                  }
+                })
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-4" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "" } }, [
+                  _vm._v("Section 5 Title")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.datas.section_5_title,
+                      expression: "datas.section_5_title"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.datas.section_5_title },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.datas,
+                        "section_5_title",
+                        $event.target.value
+                      )
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-4" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "" } }, [
+                  _vm._v("Section 5 Header")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.datas.section_5_header,
+                      expression: "datas.section_5_header"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.datas.section_5_header },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.datas,
+                        "section_5_header",
+                        $event.target.value
+                      )
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-4" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "" } }, [
+                  _vm._v("Section 5 Image")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: { type: "file" },
+                  on: { change: _vm.ChangeImage5 }
+                }),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "img-thumbnail",
+                  attrs: {
+                    src: "/uploads/uploads/" + _vm.datas.section_5_image,
+                    alt: ""
+                  }
+                }),
+                _vm._v(" "),
+                _vm.url5
+                  ? _c("p", { staticClass: "mt-2" }, [_vm._v("Upload Terbaru")])
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm.url5
+                  ? _c("img", {
+                      staticClass: "img-thumbnail mt-2",
+                      attrs: { src: _vm.url5, alt: "" }
+                    })
+                  : _vm._e()
+              ])
+            ])
           ]),
           _vm._v(" "),
           _c("button", { staticClass: "btn btn-success" }, [_vm._v("Simpan")])

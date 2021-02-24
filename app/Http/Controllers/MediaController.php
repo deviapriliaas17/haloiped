@@ -9,7 +9,8 @@ class MediaController extends Controller
 {
     public function saveImage($image, $from)
     {
-        if($image != null){
+        
+        if($image !=  null){
             $getExtension = $image->getClientOriginalExtension();
             $name = "image-".$from."-".date("YmdHis").'.'.$getExtension;
             $image->storeAs('uploads',$name,'public_folder');

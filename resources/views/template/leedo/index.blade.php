@@ -8,19 +8,19 @@
 			<ul>
 				<!-- SLIDE-->
 				<li data-index="rs-5" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-					<!-- MAIN IMAGE--><img class="rev-slidebg" src="{{ asset('template/leedo/assets/img/root/transparent.png')}}')}}" data-bgcolor="#0c0c0c" style="background:#0c0c0c" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" data-no-retina="">
+					<!-- MAIN IMAGE--><img class="rev-slidebg" src="{{ asset('template/leedo/assets/img/root/transparent.png')}}')}}" data-bgcolor="#0c0c0c" style="background:#0c0c0c" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" data-no-retina="" height="758.813px" width="1349px">
 					<!-- LAYERS-->
 					<!-- LAYER NR. 1-->
 					<div class="tp-caption rev_group" id="slide-5-layer-4" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['120','120','120','100']" data-width="410" data-height="['60','60','60','140']" data-whitespace="normal" data-type="group" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:300,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textalign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 8; min-width: 410px; max-width: 410px; max-width: 60px; max-width: 60px; white-space: normal; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">
 						<!-- LAYER NR. 2-->
-						<div class="tp-caption" id="slide-5-layer-2" data-x="['left','left','left','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','top']" data-voffset="['0','0','0','0']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:&quot;+990&quot;,&quot;speed&quot;:500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textalign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 9; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><a class="vlt-btn vlt-btn--primary vlt-btn--effect vlt-btn--lg" href="contact-us-01.html"><span>Contact Us</span></a></div>
+						<div class="tp-caption" id="slide-5-layer-2" data-x="['left','left','left','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','top']" data-voffset="['0','0','0','0']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:&quot;+990&quot;,&quot;speed&quot;:500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textalign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 9; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><a class="vlt-btn vlt-btn--primary vlt-btn--effect vlt-btn--lg" href="{{ $content->section_1_link_1 }}"><span>{{ $content->section_1_button_1 }}</span></a></div>
 						<!-- LAYER NR. 3-->
-						<div class="tp-caption" id="slide-5-layer-3" data-x="['right','right','right','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','bottom']" data-voffset="['0','0','0','0']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:&quot;+1240&quot;,&quot;speed&quot;:500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textalign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 10; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><a class="vlt-btn vlt-btn--secondary vlt-btn--effect vlt-btn--lg" href="portfolio-01.html"><span>View Projects</span></a></div>
+						<div class="tp-caption" id="slide-5-layer-3" data-x="['right','right','right','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','bottom']" data-voffset="['0','0','0','0']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:&quot;+1240&quot;,&quot;speed&quot;:500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textalign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 10; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><a class="vlt-btn vlt-btn--secondary vlt-btn--effect vlt-btn--lg" href="{{ $content->section_1_link_2}}"><span>{{ $content->section_1_button_2 }}</span></a></div>
 					</div>
 					<!-- LAYER NR. 4-->
-					<div class="tp-caption tp-resizeme rs-parallaxlevel-4" id="slide-5-layer-5" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full-proportional" data-height="full-proportional" data-whitespace="nowrap" data-type="image" data-basealign="slide" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:300,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;opacity:0;&quot;,&quot;to&quot;:&quot;o:0.5;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-textalign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;"><img src="{{ asset('template/leedo/assets/img/slider/homepage-05/01.jpg')}}" alt="" data-ww="['full-proportional','full-proportional','full-proportional','full-proportional']" data-hh="['full-proportional','full-proportional','full-proportional','full-proportional']" data-no-retina=""></div>
+					<div class="tp-caption tp-resizeme rs-parallaxlevel-4" id="slide-5-layer-5" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full-proportional" data-height="full-proportional" data-whitespace="nowrap" data-type="image" data-basealign="slide" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:300,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;opacity:0;&quot;,&quot;to&quot;:&quot;o:0.5;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-textalign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;"><img src="{{ asset('uploads/uploads/'.$content->section_1_image)}}" alt="" data-ww="['full-proportional','full-proportional','full-proportional','full-proportional']" data-hh="['full-proportional','full-proportional','full-proportional','full-proportional']" data-no-retina=""></div>
 					<!-- LAYER NR. 5-->
-					<h1 class="tp-caption" id="slide-5-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-60','-60','-60','-100']" data-fontsize="['58','58','58','38']" data-lineheight="['70','70','70','50']" data-width="['501','501','501','430']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:500,&quot;speed&quot;:500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:-50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-textalign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 7; min-width: 501px; max-width: 501px; white-space: normal; font-size: 58px; line-height: 70px; font-weight: 700; color: #ffffff; letter-spacing: 0px;font-family:Montserrat;text-transform:lowercase;">We create<br>digital branding<br>products.</h1>
+					<h1 class="tp-caption" id="slide-5-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-60','-60','-60','-100']" data-fontsize="['58','58','58','38']" data-lineheight="['70','70','70','50']" data-width="['501','501','501','430']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:500,&quot;speed&quot;:500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:-50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-textalign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 7; min-width: 501px; max-width: 501px; white-space: normal; font-size: 58px; line-height: 70px; font-weight: 700; color: #ffffff; letter-spacing: 0px;font-family:Montserrat;text-transform:lowercase;">{{ $content->section_1_title }}<br>{{ $content->section_1_header }}</h1>
 				</li>
 			</ul>
 			<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
@@ -138,8 +138,8 @@
 			<div class="text-center">
 				<!--Animation Block-->
 				<div class="vlt-animation-block" data-aos="fade" data-aos-delay="0">
-					<h3 class="vlt-first-color text-lowercase m-0">{{ $content->section_1_title }}</span> <br>
-						{{ $content->section_1_header }} <br>
+					<h3 class="vlt-first-color text-lowercase m-0">{{ $content->section_2_title }}</span> <br>
+						{{ $content->section_2_header }} <br>
 					</h3>
 				</div>
 				<div class="vlt-gap-30"></div>
@@ -162,71 +162,34 @@
 			<!--Particle-->
 			<div class="vlt-particle" data-jarallax-element="-100 0" style="top: -70px; left: calc(-160px - 15px); max-width: 250px;"><img src="{{ asset('template/leedo/assets/img/root/particle-01--black.png')}}" alt=""></div>
 			<div class="row">
+			@foreach($skills as $s)
 				<div class="col-md-4">
 					<!--Animation Block-->
 					<div class="vlt-animation-block" data-aos="fade" data-aos-delay="0">
 						<!--Simple Image-->
 						<div class="vlt-simple-image">
-							<div class="vlt-fit-image" style="--size-md: 250px; --size-sm: 300px;"><img src="{{ asset('template/leedo/assets/img/attachment-75.jpg')}}" alt=""></div>
+							<div class="vlt-fit-image" style="--size-md: 250px; --size-sm: 300px;"><img src="{{ asset('uploads/uploads/'.$s->image)}}" alt=""></div>
 						</div>
 						<div class="vlt-gap-30"></div>
 						<!--Services Item-->
 						<div class="vlt-services vlt-services--top-center">
 							<div class="vlt-services__content">
-								<h4 class="vlt-services__title"><a href="service-single.html"><span class="vlt-highlight">Web Development</span></a>
+								<h4 class="vlt-services__title"><a href="service-single.html"><span class="vlt-highlight">{{ $s->name }}</span></a>
 								</h4>
-								<p class="vlt-services__text">May behold sea from living divide set man. Earth make female waters deep let first our bearing open upon, our.
+								<p class="vlt-services__text">{{ $s->description }}
 								</p>
 							</div>
 						</div>
 					</div>
 					<div class="vlt-gap-60--sm"></div>
 				</div>
-				<div class="col-md-4">
-					<!--Animation Block-->
-					<div class="vlt-animation-block" data-aos="fade" data-aos-delay="100">
-						<!--Simple Image-->
-						<div class="vlt-simple-image">
-							<div class="vlt-fit-image" style="--size-md: 250px; --size-sm: 300px;"><img src="{{ asset('template/leedo/assets/img/attachment-76.jpg')}}" alt=""></div>
-						</div>
-						<div class="vlt-gap-30"></div>
-						<!--Services Item-->
-						<div class="vlt-services vlt-services--top-center">
-							<div class="vlt-services__content">
-								<h4 class="vlt-services__title"><a href="service-single.html"><span class="vlt-highlight">UI/UX Design</span></a>
-								</h4>
-								<p class="vlt-services__text">You beast whales were To set together, saw man. Creature good after. Male every Bring, fourth set saying tree own.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="vlt-gap-60--sm"></div>
-				</div>
-				<div class="col-md-4">
-					<!--Animation Block-->
-					<div class="vlt-animation-block" data-aos="fade" data-aos-delay="200">
-						<!--Simple Image-->
-						<div class="vlt-simple-image">
-							<div class="vlt-fit-image" style="--size-md: 250px; --size-sm: 300px;"><img src="{{ asset('template/leedo/assets/img/attachment-77.jpg')}}" alt=""></div>
-						</div>
-						<div class="vlt-gap-30"></div>
-						<!--Services Item-->
-						<div class="vlt-services vlt-services--top-center">
-							<div class="vlt-services__content">
-								<h4 class="vlt-services__title"><a href="service-single.html"><span class="vlt-highlight">SEO &amp; Marketing</span></a>
-								</h4>
-								<p class="vlt-services__text">Form. Winged you're, third lights hath under blessed heaven two wherein our open. Dry, shall face. Creature over divide set.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
+			@endforeach
 			</div>
 		</div>
 		<div class="vlt-gap-120"></div>
 	</section>
 	<!--Counter Up 02-->
-	<section class="jarallax"><img class="jarallax-img" src="assets/img/attachment-04.jpg')}}" alt="">
+	<section class="jarallax"><img class="jarallax-img" src="{{asset('uploads/uploads/'.$content->section_2_image)}}" alt="">
 		<div class="jarallax-overlay" style="background-color: rgba(26,26,26,0.1);"></div>
 		<div class="container">
 			<div class="row d-flex align-items-center">
@@ -235,7 +198,7 @@
 						<!--Simple Image-->
 						<div class="vlt-simple-image">
 							<div class="vlt-simple-image__overlay"></div>
-							<div class="vlt-fit-image" style="--size-md: 700px; --size-sm: 100%;"><img src="{{ asset('template/leedo/assets/img/attachment-74.jpg')}}" alt=""></div>
+							<div class="vlt-fit-image" style="--size-md: 700px; --size-sm: 100%;"><img src="{{asset('uploads/uploads/'.$content->section_2_image)}}" alt=""></div>
 						</div>
 					</div>
 				</div>
@@ -244,13 +207,12 @@
 						<div class="vlt-gap-120"></div>
 						<!--Animation Block-->
 						<div class="vlt-animation-block" data-aos="fade" data-aos-delay="0">
-							<h3 class="vlt-white-color text-lowercase m-0">We create successful digital <span class="vlt-second-color">products.</span></h3>
+							<h3 class="vlt-white-color text-lowercase m-0">{{ $content->section_3_title}}</h3>
 						</div>
 						<div class="vlt-gap-60"></div>
 						<!--Animation Block-->
 						<div class="vlt-animation-block" data-aos="fade" data-aos-delay="100">
-							<p style="color: #c5c5c5;">Fly place spirit second rule dry he herb green can’t created said forth seas light without female land saw very years day him.</p>
-							<p style="color: #c5c5c5;">Waters day of brought wherein night isn’t night make doesn’t let appear unto thing light night.</p>
+							<p style="color: #c5c5c5;">{{ $content->section_3_header }}</p>
 						</div>
 						<div class="vlt-gap-50"></div>
 						<!--Animation Block-->
@@ -258,9 +220,9 @@
 							<div class="row">
 								<div class="col-md-4">
 									<!--Counter Up-->
-									<div class="vlt-counter-up vlt-counter-up--style-2" data-value="452">
+									<div class="vlt-counter-up vlt-counter-up--style-2" data-value="{{ $content->section_3_number_1}}">
 										<div class="vlt-counter-up__content"><strong>0</strong>
-											<h4 class="vlt-display-1" style="color:#fff;">Work Completed
+											<h4 class="vlt-display-1" style="color:#fff;">{{ $content->section_3_text_1 }}
 											</h4>
 										</div>
 									</div>
@@ -268,9 +230,9 @@
 								</div>
 								<div class="col-md-4">
 									<!--Counter Up-->
-									<div class="vlt-counter-up vlt-counter-up--style-2" data-value="358">
+									<div class="vlt-counter-up vlt-counter-up--style-2" data-value="{{ $content->section_3_number_2 }}">
 										<div class="vlt-counter-up__content"><strong>0</strong>
-											<h4 class="vlt-display-1" style="color:#fff;">Happy Customers
+											<h4 class="vlt-display-1" style="color:#fff;">{{ $content->section_3_text_2}}
 											</h4>
 										</div>
 									</div>
@@ -278,9 +240,9 @@
 								</div>
 								<div class="col-md-4">
 									<!--Counter Up-->
-									<div class="vlt-counter-up vlt-counter-up--style-2" data-value="516">
+									<div class="vlt-counter-up vlt-counter-up--style-2" data-value="{{ $content->section_3_number_3 }}">
 										<div class="vlt-counter-up__content"><strong>0</strong>
-											<h4 class="vlt-display-1" style="color:#fff;">Positive Reviews
+											<h4 class="vlt-display-1" style="color:#fff;">{{ $content->section_3_text_3 }}
 											</h4>
 										</div>
 									</div>
