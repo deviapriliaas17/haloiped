@@ -54,6 +54,9 @@ import AdminProfile from './components/Admin/MyProfile.vue';
 import AdminSkillCreate from './components/Admin/Skill/Create.vue';
 import AdminSkillIndex from './components/Admin/Skill/Index.vue';
 import AdminSkillEdit from './components/Admin/Skill/Edit.vue';
+import AdminFocusCreate from './components/Admin/Focus/Create.vue';
+import AdminFocusIndex from './components/Admin/Focus/Index.vue';
+import AdminFocusEdit from './components/Admin/Focus/Edit.vue';
 
 Vue.component(
     'passport-clients',
@@ -160,6 +163,21 @@ const routes = [{
         path: '/admin/skill/edit/:id',
         component: AdminSkillEdit,
     },
+    {
+        name: 'admin-focus-create',
+        path: '/admin/focus/create',
+        component: AdminFocusCreate
+    },
+    {
+        name: 'admin-focus',
+        path: '/admin/focus',
+        component: AdminFocusIndex
+    },
+    {
+        name: 'admin-focus-edit',
+        path: '/admin/focus/:id',
+        component: AdminFocusEdit
+    }
 ];
 
 const router = new VueRouter({

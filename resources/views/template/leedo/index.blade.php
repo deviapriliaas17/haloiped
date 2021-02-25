@@ -318,79 +318,6 @@
 		</div>
 		<div class="vlt-gap-120"></div>
 	</section>
-	<!--Portfolio 06-->
-	<section>
-		<div class="container-fluid p-0">
-			<div id="vlt-grid-portfolio-02">
-				<!--Portfolio Item-->
-				<article class="vlt-portfolio-item vlt-portfolio-item--style-2 filter-design cbp-item">
-					<div class="vlt-portfolio-item-img">
-						<div class="vlt-fit-image" style="--size-md: 90%; --size-sm: 90%;"><img src="{{ asset('template/leedo/assets/img/portfolio-08.jpg')}}" alt=""></div>
-					</div><a class="vlt-portfolio-item-overlay vlt-portfolio-item-overlay--align-center" href="single-work-01.html" style="background-color:rgba(25,25,25,.8);">
-						<div class="vlt-portfolio-item-meta">
-							<h4 class="vlt-portfolio-item-meta-title" style="color:#fff;">Nike
-							</h4><span class="vlt-portfolio-item-meta-category vlt-display-1" style="color:#fff;">Design</span>
-						</div>
-					</a>
-				</article>
-				<!--Portfolio Item-->
-				<article class="vlt-portfolio-item vlt-portfolio-item--style-2 filter-branding cbp-item">
-					<div class="vlt-portfolio-item-img">
-						<div class="vlt-fit-image" style="--size-md: 90%; --size-sm: 90%;"><img src="{{ asset('template/leedo/assets/img/portfolio-09.jpg')}}" alt=""></div>
-					</div><a class="vlt-portfolio-item-overlay vlt-portfolio-item-overlay--align-center" href="single-work-02.html" style="background-color:rgba(25,25,25,.8);">
-						<div class="vlt-portfolio-item-meta">
-							<h4 class="vlt-portfolio-item-meta-title" style="color:#fff;">Sneakers
-							</h4><span class="vlt-portfolio-item-meta-category vlt-display-1" style="color:#fff;">Branding</span>
-						</div>
-					</a>
-				</article>
-				<!--Portfolio Item-->
-				<article class="vlt-portfolio-item vlt-portfolio-item--style-2 filter-photography cbp-item">
-					<div class="vlt-portfolio-item-img">
-						<div class="vlt-fit-image" style="--size-md: 90%; --size-sm: 90%;"><img src="{{ asset('template/leedo/assets/img/portfolio-07.jpg')}}" alt=""></div>
-					</div><a class="vlt-portfolio-item-overlay vlt-portfolio-item-overlay--align-center" href="single-work-03.html" style="background-color:rgba(25,25,25,.8);">
-						<div class="vlt-portfolio-item-meta">
-							<h4 class="vlt-portfolio-item-meta-title" style="color:#fff;">Plexus
-							</h4><span class="vlt-portfolio-item-meta-category vlt-display-1" style="color:#fff;">Photography</span>
-						</div>
-					</a>
-				</article>
-				<!--Portfolio Item-->
-				<article class="vlt-portfolio-item vlt-portfolio-item--style-2 filter-inspiration cbp-item">
-					<div class="vlt-portfolio-item-img">
-						<div class="vlt-fit-image" style="--size-md: 90%; --size-sm: 90%;"><img src="{{ asset('template/leedo/assets/img/portfolio-06.jpg')}}" alt=""></div>
-					</div><a class="vlt-portfolio-item-overlay vlt-portfolio-item-overlay--align-center" href="single-work-04.html" style="background-color:rgba(25,25,25,.8);">
-						<div class="vlt-portfolio-item-meta">
-							<h4 class="vlt-portfolio-item-meta-title" style="color:#fff;">Pineapple
-							</h4><span class="vlt-portfolio-item-meta-category vlt-display-1" style="color:#fff;">Inspiration</span>
-						</div>
-					</a>
-				</article>
-				<!--Portfolio Item-->
-				<article class="vlt-portfolio-item vlt-portfolio-item--style-2 filter-graphic-design cbp-item">
-					<div class="vlt-portfolio-item-img">
-						<div class="vlt-fit-image" style="--size-md: 90%; --size-sm: 90%;"><img src="{{ asset('template/leedo/assets/img/portfolio-05.jpg')}}" alt=""></div>
-					</div><a class="vlt-portfolio-item-overlay vlt-portfolio-item-overlay--align-center" href="single-work-05.html" style="background-color:rgba(25,25,25,.8);">
-						<div class="vlt-portfolio-item-meta">
-							<h4 class="vlt-portfolio-item-meta-title" style="color:#fff;">Woman
-							</h4><span class="vlt-portfolio-item-meta-category vlt-display-1" style="color:#fff;">Graphic Design</span>
-						</div>
-					</a>
-				</article>
-				<!--Portfolio Item-->
-				<article class="vlt-portfolio-item vlt-portfolio-item--style-2 filter-design cbp-item">
-					<div class="vlt-portfolio-item-img">
-						<div class="vlt-fit-image" style="--size-md: 90%; --size-sm: 90%;"><img src="{{ asset('template/leedo/assets/img/portfolio-04.jpg')}}" alt=""></div>
-					</div><a class="vlt-portfolio-item-overlay vlt-portfolio-item-overlay--align-center" href="single-work-06.html" style="background-color:rgba(25,25,25,.8);">
-						<div class="vlt-portfolio-item-meta">
-							<h4 class="vlt-portfolio-item-meta-title" style="color:#fff;">Composition
-							</h4><span class="vlt-portfolio-item-meta-category vlt-display-1" style="color:#fff;">Design</span>
-						</div>
-					</a>
-				</article>
-			</div>
-		</div>
-	</section>
 	<!--Core Features 02-->
 	<section class="position-relative overflow-hidden">
 		<!--Particle-->
@@ -403,9 +330,9 @@
 					<div class="vlt-animation-block" data-aos="fade" data-aos-delay="0">
 						<!--Section Title-->
 						<div class="vlt-section-title text-center">
-							<h2>Core Features.
+							<h2>{{ $content->section_4_title }}
 							</h2>
-							<p>Form together meat midst our signs living stars every, winged grass likeness let replenish.
+							<p>{{ $content->section_4_header }}
 							</p>
 						</div>
 					</div>
@@ -519,98 +446,7 @@
 		</div>
 		<div class="vlt-gap-120"></div>
 	</section>
-	<!--Video 03-->
-	<section class="jarallax"><img class="jarallax-img" src="assets/img/attachment-73.jpg')}}" alt="">
-		<div class="jarallax-overlay" style="background-color: rgba(12,12,12,0.5);"></div>
-		<div class="vlt-gap-120"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<!--Section Title-->
-					<div class="vlt-section-title text-left">
-						<h3 style="color:#fff;">We create products that make people happy.
-						</h3>
-					</div>
-					<div class="vlt-gap-40--sm"></div>
-				</div>
-				<div class="col-md-5 offset-md-1">
-					<!--Video Link--><a class="vlt-video-link" href="https://www.youtube.com/embed/PArwjxF2-JM" data-fancybox="" data-caption="Video Title"><i class="fa fa-play"></i></a>
-				</div>
-			</div>
-		</div>
-		<div class="vlt-gap-120"></div>
-	</section>
-	<!--Our Team 02-->
-	<section>
-		<div class="container-fluid p-0">
-			<div class="row no-gutters">
-				<div class="col-md-3">
-					<!--Animation Block-->
-					<div class="vlt-animation-block" data-aos="fade" data-aos-delay="0">
-						<!--Team Member-->
-						<div class="vlt-team-member vlt-team-member--style-2">
-							<div class="vlt-team-member__avatar"><img src="{{ asset('template/leedo/assets/img/team-01.jpg')}}" alt="">
-							</div>
-							<div class="vlt-team-member__info">
-								<h4>Patricia Parsons
-								</h4>
-								<p>Art Director
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<!--Animation Block-->
-					<div class="vlt-animation-block" data-aos="fade" data-aos-delay="100">
-						<!--Team Member-->
-						<div class="vlt-team-member vlt-team-member--style-2">
-							<div class="vlt-team-member__avatar"><img src="{{ asset('template/leedo/assets/img/team-02.jpg')}}" alt="">
-							</div>
-							<div class="vlt-team-member__info">
-								<h4>Paul O’Brien
-								</h4>
-								<p>Senior Designer
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<!--Animation Block-->
-					<div class="vlt-animation-block" data-aos="fade" data-aos-delay="200">
-						<!--Team Member-->
-						<div class="vlt-team-member vlt-team-member--style-2">
-							<div class="vlt-team-member__avatar"><img src="{{ asset('template/leedo/assets/img/team-03.jpg')}}" alt="">
-							</div>
-							<div class="vlt-team-member__info">
-								<h4>Victoria Floyd
-								</h4>
-								<p>Lead Developer
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<!--Animation Block-->
-					<div class="vlt-animation-block" data-aos="fade" data-aos-delay="300">
-						<!--Team Member-->
-						<div class="vlt-team-member vlt-team-member--style-2">
-							<div class="vlt-team-member__avatar"><img src="{{ asset('template/leedo/assets/img/team-04.jpg')}}" alt="">
-							</div>
-							<div class="vlt-team-member__info">
-								<h4>Joseph Bridges
-								</h4>
-								<p>Developer
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+
 	<!--Testimonial 05-->
 	<section class="overflow-hidden">
 		<div class="vlt-gap-120"></div>
@@ -621,7 +457,7 @@
 					<div class="vlt-animation-block" data-aos="fade" data-aos-delay="0">
 						<!--Section Title-->
 						<div class="vlt-section-title text-center">
-							<h2>What Clients Say.
+							<h2>{{ $content->section_5_title }}
 							</h2>
 						</div>
 					</div>

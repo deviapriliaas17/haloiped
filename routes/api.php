@@ -54,4 +54,9 @@ Route::get('/admin/skill/{id}','SkillController@getData');
 Route::post('/admin/skill/edit/{id}','SkillController@update');
 Route::post('/admin/skill/create','SkillController@store');
 
+Route::post('/admin/focus/create','FocusController@store');
+Route::get('/admin/focus','FocusController@index');
+Route::get('/admin/focus/{id}', 'FocusController@getData');
+Route::post('/admin/focus/edit/{id}','FocusController@edit');
+
 
