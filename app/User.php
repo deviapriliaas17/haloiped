@@ -38,6 +38,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function user()
+    {
+        return $this->hasOne('App\blog','user_id','id');
+    }
     public function profile()
     {
         return $this->hasOne('App\profile');

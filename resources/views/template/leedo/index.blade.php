@@ -256,6 +256,7 @@
 		</div>
 	</section>
 	<!--Process 01-->
+	@if($focus[0] && $focus[1] && $focus[2])
 	<section>
 		<div class="vlt-gap-30 vlt-gap-120--sm"></div>
 		<div class="container-fluid p-0">
@@ -277,8 +278,8 @@
 						<div class="vlt-process-step">
 							<div class="vlt-process-step__value"><strong>01</strong></div>
 							<div class="vlt-process-step__content">
-								<h4>Sitemap. <br> Wireframe Creation.</h4>
-								<p>Two stars, man place waters appear their you'll rule thing creature under fill. Creeping don't that you're.
+								<h4>{{ $focus[0]['name']}}</h4>
+								<p>{{ $focus[0]['description']}}
 								</p>
 							</div>
 						</div>
@@ -292,8 +293,8 @@
 						<div class="vlt-process-step">
 							<div class="vlt-process-step__value"><strong>02</strong></div>
 							<div class="vlt-process-step__content">
-								<h4>Page Layouts. <br> Content and Coding.</h4>
-								<p>Without set was face light fly isn't is. Midst was fill set their abundantly from Creature stars.
+								<h4>{{ $focus[1]['name']}}</h4>
+								<p> {{ $focus[1]['description'] }}
 								</p>
 							</div>
 						</div>
@@ -307,8 +308,8 @@
 						<div class="vlt-process-step">
 							<div class="vlt-process-step__value"><strong>03</strong></div>
 							<div class="vlt-process-step__content">
-								<h4>Testing. <br> Review and Launch.</h4>
-								<p>Grass brought all night lesser give said air sixth third life deep male face from deep abundantly.
+								<h4>{{ $focus[2]['name']}}</h4>
+								<p>{{ $focus[2]['description']}}
 								</p>
 							</div>
 						</div>
@@ -318,7 +319,9 @@
 		</div>
 		<div class="vlt-gap-120"></div>
 	</section>
+	@endif
 	<!--Core Features 02-->
+	@if($content->section_4_show)
 	<section class="position-relative overflow-hidden">
 		<!--Particle-->
 		<div class="vlt-particle" data-jarallax-element="100 0" style="bottom: -50px; right: -40px; max-width: 250px;"><img src="{{ asset('template/leedo/assets/img/root/particle-01--black.png')}}" alt=""></div>
@@ -446,6 +449,7 @@
 		</div>
 		<div class="vlt-gap-120"></div>
 	</section>
+	@endif
 
 	<!--Testimonial 05-->
 	<section class="overflow-hidden">
@@ -469,53 +473,19 @@
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
 						<!--Testimonial Item-->
-						<div class="vlt-testimonial-item vlt-testimonial-item--style-2">
-							<div class="vlt-testimonial-item__content">
-								<p>His fruit unto the. Midst cattle seed us every bearing fill grass face every seed night don't, that gathered set.
-								</p>
+						@foreach($blogs as $b)
+							<div class="vlt-testimonial-item vlt-testimonial-item--style-2">
+								<div class="vlt-testimonial-item__content">
+									<p>{{ substr($b->content,0,400)}}
+									</p>
+								</div>
+								<div class="vlt-testimonial-item__metas">
+									<div class="avatar"><img src="{{ asset('template/leedo/assets/img/avatar-03.jpg')}}" alt=""></div>
+									<h5 class="vlt-display-1">{{ $b->user->name }}
+									</h5><span>envato.com</span>
+								</div>
 							</div>
-							<div class="vlt-testimonial-item__metas">
-								<div class="avatar"><img src="{{ asset('template/leedo/assets/img/avatar-03.jpg')}}" alt=""></div>
-								<h5 class="vlt-display-1">Paul Jefferson
-								</h5><span>envato.com</span>
-							</div>
-						</div>
-						<!--Testimonial Item-->
-						<div class="vlt-testimonial-item vlt-testimonial-item--style-2">
-							<div class="vlt-testimonial-item__content">
-								<p>Together so you're land him. Is air together years female our herb third darkness fish. Male. Upon appear void very.
-								</p>
-							</div>
-							<div class="vlt-testimonial-item__metas">
-								<div class="avatar"><img src="{{ asset('template/leedo/assets/img/avatar-05.jpg')}}" alt=""></div>
-								<h5 class="vlt-display-1">Helen Reeves
-								</h5><span>envato.com</span>
-							</div>
-						</div>
-						<!--Testimonial Item-->
-						<div class="vlt-testimonial-item vlt-testimonial-item--style-2">
-							<div class="vlt-testimonial-item__content">
-								<p>Two years sixth life over bearing his be from whose Void there tree of dry, our that image open give.
-								</p>
-							</div>
-							<div class="vlt-testimonial-item__metas">
-								<div class="avatar"><img src="{{ asset('template/leedo/assets/img/avatar-04.jpg')}}" alt=""></div>
-								<h5 class="vlt-display-1">Oliver Dixon
-								</h5><span>envato.com</span>
-							</div>
-						</div>
-						<!--Testimonial Item-->
-						<div class="vlt-testimonial-item vlt-testimonial-item--style-2">
-							<div class="vlt-testimonial-item__content">
-								<p>Set creepeth seasons dominion moving their lesser over above the i was good. Meat is without he were beginning, our him male.
-								</p>
-							</div>
-							<div class="vlt-testimonial-item__metas">
-								<div class="avatar"><img src="{{ asset('template/leedo/assets/img/avatar-06.jpg')}}" alt=""></div>
-								<h5 class="vlt-display-1">Joseph Bridges
-								</h5><span>envato.com</span>
-							</div>
-						</div>
+						@endforeach
 					</div>
 				</div>
 			</div>

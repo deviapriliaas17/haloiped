@@ -17,6 +17,7 @@ Route::post('auth/register','AuthController@register')->name('auth/register');
 Route::post('auth/login','AuthController@login')->name('auth/login');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/','FrontController@home');
+Route::get('/about','FrontController@about');
 Route::get('/{any}', function () {
     return view('layouts/app');
 })->where('any','.*');
