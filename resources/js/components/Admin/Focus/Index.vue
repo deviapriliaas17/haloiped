@@ -12,12 +12,12 @@
                         <th>Icon</th>
                         <th>Action</th>
                     </thead>
-                    <tbody v-for="(focus, index) in focuses" :key="focus.id">
+                    <tbody v-for="(focus, index) in focuses" :key="focus.key">
                         <td>{{ index + 1}}</td>
                         <td>{{ focus.name }}</td>
                         <td>{{ focus.description }}</td>
                         <td>{{ focus.icon }}</td>
-                        <td><router-link class="btn btn-info" :to="{ name:'admin-focus-edit', params: { 'id': focus.id}}">Edit</router-link></td>
+                        <td><router-link class="btn btn-info" :to="{ name:'admin-focus-edit', params: { 'id': focus.key}}">Edit</router-link></td>
                     </tbody>
                 </table>
             </div>

@@ -12,12 +12,12 @@
                     <th>Image</th>
                     <th>Action</th>
                 </thead>
-                <tbody v-for="(portfolio,index) in portfolios" :key="portfolio.id">
-                    <td>{{ index+1 }}</td>
+                <tbody v-for="(portfolio,index) in portfolios" :key="portfolio.key">
+                    <td>{{ index + 1 }}</td>
                     <td>{{ portfolio.name }}</td>
                     <td> <img :src="'/uploads/uploads/' + portfolio.image" alt="" class="img-fluid"></td>
                     <td>
-                        <router-link class="btn btn-sm btn-info" :to="{ name : 'admin-portfolio-edit', params:{'id':portfolio.id}}">Edit</router-link>
+                        <router-link class="btn btn-sm btn-info" :to="{ name : 'admin-portfolio-edit', params:{'id':portfolio.key}}">Edit</router-link>
                     </td>
                 </tbody>
             </table>

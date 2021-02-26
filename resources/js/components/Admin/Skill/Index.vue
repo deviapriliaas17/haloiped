@@ -13,13 +13,13 @@
                         <th>Image</th>
                         <th>Action</th>
                     </thead>
-                    <tbody v-for="(skill, index) in skills" :key="skill.id">
+                    <tbody v-for="(skill, index) in skills" :key="skill.key">
                         <td> {{ index + 1}} </td>
                         <td> {{ skill.name }}</td>
                         <td>{{ skill.description }}</td>
                         <td>{{ skill.rate }}</td>
                         <td> <img class="img-thumbnail" :src="'/uploads/uploads/' + skill.image " alt=""></td>
-                        <td><router-link :to="{ name : 'admin-skill-edit', params: {'id' : skill.id}}" class="btn btn-info">Edit</router-link></td>
+                        <td><router-link :to="{ name : 'admin-skill-edit', params: {'id' : skill.key}}" class="btn btn-info">Edit</router-link></td>
                     </tbody>
                 </table>
             </div>

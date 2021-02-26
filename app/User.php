@@ -6,6 +6,8 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
+use Illuminate\Support\Facades\Crypt;
+
 
 class User extends Authenticatable
 {
@@ -26,9 +28,9 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token','id'
     ];
-
+    protected $appends=['key'];
     /**
      * The attributes that should be cast to native types.
      *
@@ -45,5 +47,10 @@ class User extends Authenticatable
     public function profile()
     {
         return $this->hasOne('App\profile');
+    }
+    public function getKeyAttribute()
+    {
+        $id = encrypt($this->id);
+        return $id;
     }
 }

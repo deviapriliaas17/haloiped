@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\MediaController;
 use App\portfolio;
+use Illuminate\Support\Facades\Crypt;
 
 class PortfolioController extends Controller
 {
@@ -14,7 +15,7 @@ class PortfolioController extends Controller
     }
     public function getData($id)
     {
-        $portfolio = portfolio::find($id);
+        $portfolio = portfolio::find(decrypt($id));
         return response()->json($portfolio);
     }
     public function index()
@@ -38,7 +39,7 @@ class PortfolioController extends Controller
     }
     public function edit(Request $request, $id)
     {
-        $portfolio = portfolio::find($id);
+        $portfolio = portfolio::find(decrypt($id));
         $data = $request->all();
         if($request->file('image')){
             $data['image'] = $this->MediaController->saveImage($request->file('image'), 'portfolio');

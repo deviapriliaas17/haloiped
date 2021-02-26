@@ -57,6 +57,9 @@ import AdminSkillEdit from './components/Admin/Skill/Edit.vue';
 import AdminFocusCreate from './components/Admin/Focus/Create.vue';
 import AdminFocusIndex from './components/Admin/Focus/Index.vue';
 import AdminFocusEdit from './components/Admin/Focus/Edit.vue';
+import AdminTemplateCreate from './components/Admin/Template/Create.vue';
+import AdminTemplateIndex from './components/Admin/Template/Index.vue';
+import AdminTemplateEdit from './components/Admin/Template/Edit.vue';
 
 Vue.component(
     'passport-clients',
@@ -177,6 +180,21 @@ const routes = [{
         name: 'admin-focus-edit',
         path: '/admin/focus/:id',
         component: AdminFocusEdit
+    },
+    {
+        name: 'admin-template-create',
+        path: '/admin/template/create',
+        component: AdminTemplateCreate
+    },
+    {
+        name: 'admin-template',
+        path: '/admin/template',
+        component: AdminTemplateIndex
+    },
+    {
+        name: 'admin-template-edit',
+        path: '/admin/template/:id',
+        component: AdminTemplateEdit
     }
 ];
 

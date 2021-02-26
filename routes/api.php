@@ -59,4 +59,8 @@ Route::get('/admin/focus','FocusController@index');
 Route::get('/admin/focus/{id}', 'FocusController@getData');
 Route::post('/admin/focus/edit/{id}','FocusController@edit');
 
+Route::post('/admin/template/create','TemplateController@store');
+Route::get('/admin/template/{id}','TemplateController@getData');
+Route::get('/admin/template','TemplateController@index');
+Route::post('/admin/template/edit/{id}','TemplateController@edit');
 

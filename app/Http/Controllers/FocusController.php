@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\focus;
+use Illuminate\Support\Facades\Crypt;
 
 class FocusController extends Controller
 {
@@ -27,7 +28,7 @@ class FocusController extends Controller
     public function getData($id)
     {
  
-        $focuses = focus::find($id);    
+        $focuses = focus::find(decrypt($id));    
         return response()->json([
             'focuses' => $focuses
         ]);
@@ -35,7 +36,7 @@ class FocusController extends Controller
 
     public function edit(Request $request, $id)
     {
-        $focus = focus::find($id);
+        $focus = focus::find(decrypt($id));
         $data = $request->all();
 
         $focus->fill($data)->update();

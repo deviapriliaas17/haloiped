@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\MediaController;
 use App\skill;
+use Illuminate\Support\Facades\Crypt;
 
 class SkillController extends Controller
 {
@@ -28,14 +29,14 @@ class SkillController extends Controller
         ], 200);
     }
     public function getData($id){
-        $skill = skill::find($id);
+        $skill = skill::find(decrypt($id));
         return response()->json([
             'message' => 'success',
             'skill' => $skill
         ]);
     }
     public function update(Request $request, $id){
-        $skill = skill::find($id);
+        $skill = skill::find(decrypt($id));
         $data = $request->all();
         $data['image'] = $this->MediaController->saveImage($request->image,'skill');
         $skill->fill($data)->save();
