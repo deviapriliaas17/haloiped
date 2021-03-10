@@ -15,6 +15,7 @@ class HomePage extends Model
         'section_3_text_2','section_3_number_2','section_3_text_3','section_3_number_3',
         'section_3_text_4','section_3_number_4','section_4_title','section_4_header',
         'section_5_title','section_5_header','section_5_image',
+        'section_1_show','section_2_show','section_3_show','section_4_show','section_5_show'
     ];
     public $timestamps = false;
 }

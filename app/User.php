@@ -48,6 +48,11 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\profile');
     }
+
+    public function blog()
+    {
+        return $this->hasMany('App\blog');
+    }
     public function getKeyAttribute()
     {
         $id = encrypt($this->id);

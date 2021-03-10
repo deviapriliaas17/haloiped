@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\HomePage as home;
-use App\{User, skill, focus, BlogPage as blog, AboutPage as about};
+use App\{User, skill, focus, BlogPage, AboutPage, blog};
 use Auth;
 
 class FrontController extends Controller
@@ -28,7 +28,7 @@ class FrontController extends Controller
     }
     public function about()
     {
-        $content = about::find(1);
+        $content = AboutPage::find(1);
 
         return view('template/'.$this->template.'/about', compact('content'));
     }

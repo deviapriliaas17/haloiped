@@ -49,6 +49,13 @@
                     <input type="text" class="form-control" v-model="datas.section_1_link_2">
                 </div>
                 <div class="form-group">
+                    <label for="">Show Section 1</label>
+                    <select name="" class="form-control" id="" v-model="datas.section_1_show">
+                        <option value="1">Show</option>
+                        <option value="0">Hide</option>
+                    </select>
+                </div>
+                <div class="form-group">
                     <label for="">Section 2 Title</label>
                     <input type="text" v-model="datas.section_2_title" class="form-control">
                 </div>
@@ -66,6 +73,13 @@
                     <img :src="'/uploads/uploads/' + datas.section_2_image" alt="" class="img-thumbnail">
                     <p v-if="url2" class="mt-2">Upload Terbaru</p>
                     <img v-if="url2" :src="url2" alt="" class="img-thumbnail mt-2">
+                </div>
+                <div class="form-group">
+                    <label for="">Show Section 2</label>
+                    <select name="" class="form-control" id="" v-model="datas.section_2_show">
+                        <option value="1">Show</option>
+                        <option value="0">Hide</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="">Section 3 Title</label>
@@ -131,6 +145,13 @@
                         </div>
                     </div>
                 </div>
+                <div class="form-group">
+                    <label for="">Show Section 3</label>
+                    <select name="" class="form-control" id="" v-model="datas.section_3_show">
+                        <option value="1">Show</option>
+                        <option value="0">Hide</option>
+                    </select>
+                </div>
                 <div class="row">
                     <div class="col-6">
                         <div class="form-group">
@@ -144,6 +165,13 @@
                             <input type="text" v-model="datas.section_4_header" class="form-control">
                         </div>
                     </div>
+                </div>
+                 <div class="form-group">
+                    <label for="">Show Section 4</label>
+                    <select name="" class="form-control" id="" v-model="datas.section_4_show">
+                        <option value="1">Show</option>
+                        <option value="0">Hide</option>
+                    </select>
                 </div>
                 <div class="row">
                     <div class="col-4">
@@ -167,6 +195,13 @@
                             <img v-if="url5" :src="url5" alt="" class="img-thumbnail mt-2">
                         </div>
                     </div>
+                </div>
+                <div class="form-group">
+                    <label for="">Show Section 5</label>
+                    <select name="" class="form-control" id="" v-model="datas.section_5_show">
+                        <option value="1">Show</option>
+                        <option value="0">Hide</option>
+                    </select>
                 </div>
                 <button class="btn btn-success">Simpan</button>
             </form>
@@ -208,6 +243,11 @@ export default {
                 section_5_title:'',
                 section_5_header:'',
                 section_5_image:'',
+                section_1_show:'',
+                section_2_show:'',
+                section_3_show:'',
+                section_4_show:'',
+                section_5_show:''
             },
             newImage1:'',
             newImage2:'',
@@ -256,6 +296,11 @@ export default {
                 formData.append("section_5_title",this.datas.section_5_title);
                 formData.append("section_5_header",this.datas.section_5_header);
                 formData.append("section_5_image",this.newImage5);
+                formData.append("section_1_show",this.datas.section_1_show);
+                formData.append("section_2_show",this.datas.section_2_show);
+                formData.append("section_3_show",this.datas.section_3_show);
+                formData.append("section_4_show",this.datas.section_4_show);
+                formData.append("section_5_show",this.datas.section_5_show);
             this.axios.post(uri,formData).then((response) =>{
                 this.$swal.fire("Berhasil")
                 // location.reload();

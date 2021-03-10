@@ -256,7 +256,7 @@
 		</div>
 	</section>
 	<!--Process 01-->
-	@if($focus[0] && $focus[1] && $focus[2])
+	@if(count($focus) == 3)
 	<section>
 		<div class="vlt-gap-30 vlt-gap-120--sm"></div>
 		<div class="container-fluid p-0">
@@ -451,7 +451,7 @@
 	</section>
 	@endif
 
-	<!--Testimonial 05-->
+	@if($blogs->count() > 3)
 	<section class="overflow-hidden">
 		<div class="vlt-gap-120"></div>
 		<div class="container position-relative">
@@ -492,5 +492,6 @@
 		</div>
 		<div class="vlt-gap-120"></div>
 	</section>
+	@endif
 </main>
 @endsection

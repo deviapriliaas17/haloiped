@@ -3098,6 +3098,41 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -3130,7 +3165,12 @@ __webpack_require__.r(__webpack_exports__);
         section_4_header: '',
         section_5_title: '',
         section_5_header: '',
-        section_5_image: ''
+        section_5_image: '',
+        section_1_show: '',
+        section_2_show: '',
+        section_3_show: '',
+        section_4_show: '',
+        section_5_show: ''
       },
       newImage1: '',
       newImage2: '',
@@ -3183,6 +3223,11 @@ __webpack_require__.r(__webpack_exports__);
       formData.append("section_5_title", this.datas.section_5_title);
       formData.append("section_5_header", this.datas.section_5_header);
       formData.append("section_5_image", this.newImage5);
+      formData.append("section_1_show", this.datas.section_1_show);
+      formData.append("section_2_show", this.datas.section_2_show);
+      formData.append("section_3_show", this.datas.section_3_show);
+      formData.append("section_4_show", this.datas.section_4_show);
+      formData.append("section_5_show", this.datas.section_5_show);
       this.axios.post(uri, formData).then(function (response) {
         _this2.$swal.fire("Berhasil"); // location.reload();
 
@@ -47330,6 +47375,48 @@ var render = function() {
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("Show Section 1")]),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.datas.section_1_show,
+                    expression: "datas.section_1_show"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { name: "", id: "" },
+                on: {
+                  change: function($event) {
+                    var $$selectedVal = Array.prototype.filter
+                      .call($event.target.options, function(o) {
+                        return o.selected
+                      })
+                      .map(function(o) {
+                        var val = "_value" in o ? o._value : o.value
+                        return val
+                      })
+                    _vm.$set(
+                      _vm.datas,
+                      "section_1_show",
+                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                    )
+                  }
+                }
+              },
+              [
+                _c("option", { attrs: { value: "1" } }, [_vm._v("Show")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "0" } }, [_vm._v("Hide")])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
             _c("label", { attrs: { for: "" } }, [_vm._v("Section 2 Title")]),
             _vm._v(" "),
             _c("input", {
@@ -47440,6 +47527,48 @@ var render = function() {
                   attrs: { src: _vm.url2, alt: "" }
                 })
               : _vm._e()
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("Show Section 2")]),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.datas.section_2_show,
+                    expression: "datas.section_2_show"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { name: "", id: "" },
+                on: {
+                  change: function($event) {
+                    var $$selectedVal = Array.prototype.filter
+                      .call($event.target.options, function(o) {
+                        return o.selected
+                      })
+                      .map(function(o) {
+                        var val = "_value" in o ? o._value : o.value
+                        return val
+                      })
+                    _vm.$set(
+                      _vm.datas,
+                      "section_2_show",
+                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                    )
+                  }
+                }
+              },
+              [
+                _c("option", { attrs: { value: "1" } }, [_vm._v("Show")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "0" } }, [_vm._v("Hide")])
+              ]
+            )
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "form-group" }, [
@@ -47774,6 +47903,48 @@ var render = function() {
             ])
           ]),
           _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("Show Section 3")]),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.datas.section_3_show,
+                    expression: "datas.section_3_show"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { name: "", id: "" },
+                on: {
+                  change: function($event) {
+                    var $$selectedVal = Array.prototype.filter
+                      .call($event.target.options, function(o) {
+                        return o.selected
+                      })
+                      .map(function(o) {
+                        var val = "_value" in o ? o._value : o.value
+                        return val
+                      })
+                    _vm.$set(
+                      _vm.datas,
+                      "section_3_show",
+                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                    )
+                  }
+                }
+              },
+              [
+                _c("option", { attrs: { value: "1" } }, [_vm._v("Show")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "0" } }, [_vm._v("Hide")])
+              ]
+            )
+          ]),
+          _vm._v(" "),
           _c("div", { staticClass: "row" }, [
             _c("div", { staticClass: "col-6" }, [
               _c("div", { staticClass: "form-group" }, [
@@ -47842,6 +48013,48 @@ var render = function() {
                 })
               ])
             ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("Show Section 4")]),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.datas.section_4_show,
+                    expression: "datas.section_4_show"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { name: "", id: "" },
+                on: {
+                  change: function($event) {
+                    var $$selectedVal = Array.prototype.filter
+                      .call($event.target.options, function(o) {
+                        return o.selected
+                      })
+                      .map(function(o) {
+                        var val = "_value" in o ? o._value : o.value
+                        return val
+                      })
+                    _vm.$set(
+                      _vm.datas,
+                      "section_4_show",
+                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                    )
+                  }
+                }
+              },
+              [
+                _c("option", { attrs: { value: "1" } }, [_vm._v("Show")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "0" } }, [_vm._v("Hide")])
+              ]
+            )
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "row" }, [
@@ -47945,6 +48158,48 @@ var render = function() {
                   : _vm._e()
               ])
             ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("Show Section 5")]),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.datas.section_5_show,
+                    expression: "datas.section_5_show"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { name: "", id: "" },
+                on: {
+                  change: function($event) {
+                    var $$selectedVal = Array.prototype.filter
+                      .call($event.target.options, function(o) {
+                        return o.selected
+                      })
+                      .map(function(o) {
+                        var val = "_value" in o ? o._value : o.value
+                        return val
+                      })
+                    _vm.$set(
+                      _vm.datas,
+                      "section_5_show",
+                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                    )
+                  }
+                }
+              },
+              [
+                _c("option", { attrs: { value: "1" } }, [_vm._v("Show")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "0" } }, [_vm._v("Hide")])
+              ]
+            )
           ]),
           _vm._v(" "),
           _c("button", { staticClass: "btn btn-success" }, [_vm._v("Simpan")])
