@@ -2666,6 +2666,44 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2809,12 +2847,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
+    var _datas;
+
     return {
-      datas: {
+      datas: (_datas = {
         section_1_header: '',
         section_1_title: '',
         section_1_description: '',
         section_1_image: '',
+        section_2_show: '',
         section_2_title_1: '',
         section_2_title_2: '',
         section_2_title_3: '',
@@ -2823,14 +2864,18 @@ __webpack_require__.r(__webpack_exports__);
         section_2_desc_3: '',
         section_2_icon_1: '',
         section_2_icon_2: '',
-        section_2_icon_3: '',
-        section_3_title: '',
-        section_3_description: '',
-        section_3_image: '',
-        description: '',
-        title: '',
-        keyphrase: ''
-      }
+        section_2_icon_3: ''
+      }, _defineProperty(_datas, "section_2_show", ''), _defineProperty(_datas, "section_3_title", ''), _defineProperty(_datas, "section_3_description", ''), _defineProperty(_datas, "section_3_image", ''), _defineProperty(_datas, "section_3_show", ''), _defineProperty(_datas, "description", ''), _defineProperty(_datas, "title", ''), _defineProperty(_datas, "keyphrase", ''), _datas),
+      url1: '',
+      url3: '',
+      icon_1: '',
+      icon_2: '',
+      icon_3: '',
+      image_1: '',
+      image_3: '',
+      icon_image_1: '',
+      icon_image_2: '',
+      icon_image_3: ''
     };
   },
   created: function created() {
@@ -2843,19 +2888,29 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     image1: function image1(event) {
-      this.datas.section_1_image = event.target.files[0];
+      var file = event.target.files[0];
+      this.url1 = URL.createObjectURL(file);
+      this.image_1 = file;
     },
     icon1: function icon1(event) {
-      this.datas.section_2_icon_1 = event.target.files[0];
+      var file = event.target.files[0];
+      this.icon_1 = URL.createObjectURL(file);
+      this.icon_image_1 = file;
     },
     icon2: function icon2(event) {
-      this.datas.section_2_icon_2 = event.target.files[0];
+      var file = event.target.files[0];
+      this.icon_2 = URL.createObjectURL(file);
+      this.icon_image_2 = file;
     },
     icon3: function icon3(event) {
-      this.datas.section_2_icon_3 = event.target.files[0];
+      var file = event.target.files[0];
+      this.icon_3 = URL.createObjectURL(file);
+      this.icon_image_3 = file;
     },
     image3: function image3(event) {
-      this.datas.section_3_image = event.target.files[0];
+      var file = event.target.files[0];
+      this.url3 = URL.createObjectURL(file);
+      this.image_3 = file;
     },
     UpdateAbout: function UpdateAbout() {
       var _this2 = this;
@@ -2865,18 +2920,21 @@ __webpack_require__.r(__webpack_exports__);
       sendData.append("section_1_header", this.datas.section_1_header);
       sendData.append("section_1_title", this.datas.section_1_title);
       sendData.append("section_1_description", this.datas.section_1_description);
-      sendData.append("section_1_image", this.datas.section_1_image);
+      sendData.append("section_1_image", this.image_1);
       sendData.append("section_2_title_1", this.datas.section_2_title_1);
       sendData.append("section_2_title_2", this.datas.section_2_title_2);
       sendData.append("section_2_title_3", this.datas.section_2_title_3);
       sendData.append("section_2_desc_1", this.datas.section_2_desc_1);
       sendData.append("section_2_desc_2", this.datas.section_2_desc_2);
-      sendData.append("section_2_icon_1", this.datas.section_2_icon_1);
-      sendData.append("section_2_icon_2", this.datas.section_2_icon_2);
-      sendData.append("section_2_icon_3", this.datas.section_2_icon_3);
+      sendData.append("section_2_icon_1", this.icon_image_1);
+      sendData.append("section_2_icon_2", this.icon_image_2);
+      sendData.append("section_2_icon_3", this.icon_image_3);
       sendData.append("section_3_title", this.datas.section_3_title);
       sendData.append("section_3_description", this.datas.section_3_description);
-      sendData.append("section_3_image", this.datas.section_3_image);
+      sendData.append("section_3_image", this.image_3);
+      sendData.append("section_1_show", this.datas.section_1_show);
+      sendData.append("section_2_show", this.datas.section_2_show);
+      sendData.append("section_3_show", this.datas.section_3_show);
       sendData.append("description", this.datas.description);
       sendData.append("title", this.datas.title);
       sendData.append("keyphrase", this.datas.keyphrase);
@@ -46814,8 +46872,79 @@ var render = function() {
                   attrs: { type: "file" },
                   on: { change: _vm.image1 }
                 })
-              ])
+              ]),
+              _vm._v(" "),
+              _c("img", {
+                staticClass: "img-thumbnail",
+                attrs: {
+                  src: "/uploads/uploads/" + _vm.datas.section_1_image,
+                  alt: ""
+                }
+              }),
+              _vm._v(" "),
+              _vm.url1 ? _c("p", [_vm._v("Upload Terbaru")]) : _vm._e(),
+              _vm._v(" "),
+              _c("img", {
+                staticClass: "img-thumbnail",
+                attrs: { src: _vm.url1, alt: "" }
+              })
             ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("Show Section 1")]),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.datas.section_1_show,
+                    expression: "datas.section_1_show"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { name: "", id: "" },
+                on: {
+                  change: function($event) {
+                    var $$selectedVal = Array.prototype.filter
+                      .call($event.target.options, function(o) {
+                        return o.selected
+                      })
+                      .map(function(o) {
+                        var val = "_value" in o ? o._value : o.value
+                        return val
+                      })
+                    _vm.$set(
+                      _vm.datas,
+                      "section_1_show",
+                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                    )
+                  }
+                }
+              },
+              [
+                _c(
+                  "option",
+                  {
+                    attrs: { value: "1" },
+                    domProps: { selected: _vm.datas.section_1_show == 1 }
+                  },
+                  [_vm._v("Show")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "option",
+                  {
+                    attrs: { value: "0" },
+                    domProps: { selected: _vm.datas.section_1_show == 0 }
+                  },
+                  [_vm._v("Hide")]
+                )
+              ]
+            )
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "row" }, [
@@ -46893,6 +47022,21 @@ var render = function() {
                   staticClass: "form-control",
                   attrs: { type: "file" },
                   on: { change: _vm.icon1 }
+                }),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "img-thumbnail",
+                  attrs: {
+                    src: "/uploads/uploads/" + _vm.datas.section_2_icon_1,
+                    alt: ""
+                  }
+                }),
+                _vm._v(" "),
+                _vm.icon_1 ? _c("p", [_vm._v("Upload Terbaru")]) : _vm._e(),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "img-thumbnail",
+                  attrs: { src: _vm.icon_1, alt: "" }
                 })
               ])
             ])
@@ -46973,6 +47117,21 @@ var render = function() {
                   staticClass: "form-control",
                   attrs: { type: "file" },
                   on: { change: _vm.icon2 }
+                }),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "img-thumbnail",
+                  attrs: {
+                    src: "/uploads/uploads/" + _vm.datas.section_2_icon_2,
+                    alt: ""
+                  }
+                }),
+                _vm._v(" "),
+                _vm.icon_2 ? _c("p", [_vm._v("Upload Terbaru")]) : _vm._e(),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "img-thumbnail",
+                  attrs: { src: _vm.icon_2, alt: "" }
                 })
               ])
             ])
@@ -47053,9 +47212,80 @@ var render = function() {
                   staticClass: "form-control",
                   attrs: { type: "file" },
                   on: { change: _vm.icon3 }
+                }),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "img-thumbnail",
+                  attrs: {
+                    src: "/uploads/uploads/" + _vm.datas.section_2_icon_3,
+                    alt: ""
+                  }
+                }),
+                _vm._v(" "),
+                _vm.icon_3 ? _c("p", [_vm._v("Upload Terbaru")]) : _vm._e(),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "img-thumbnail",
+                  attrs: { src: _vm.icon_3, alt: "" }
                 })
               ])
             ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("Show Section 2")]),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.datas.section_2_show,
+                    expression: "datas.section_2_show"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { name: "", id: "" },
+                on: {
+                  change: function($event) {
+                    var $$selectedVal = Array.prototype.filter
+                      .call($event.target.options, function(o) {
+                        return o.selected
+                      })
+                      .map(function(o) {
+                        var val = "_value" in o ? o._value : o.value
+                        return val
+                      })
+                    _vm.$set(
+                      _vm.datas,
+                      "section_2_show",
+                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                    )
+                  }
+                }
+              },
+              [
+                _c(
+                  "option",
+                  {
+                    attrs: { value: "1" },
+                    domProps: { selected: _vm.datas.section_2_show == 1 }
+                  },
+                  [_vm._v("Show")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "option",
+                  {
+                    attrs: { value: "0" },
+                    domProps: { selected: _vm.datas.section_2_show == 0 }
+                  },
+                  [_vm._v("Hide")]
+                )
+              ]
+            )
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "row" }, [
@@ -47131,9 +47361,80 @@ var render = function() {
                   staticClass: "form-control",
                   attrs: { type: "file" },
                   on: { change: _vm.image3 }
+                }),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "img-thumbnail",
+                  attrs: {
+                    src: "/uploads/uploads/" + _vm.datas.section_3_image,
+                    alt: ""
+                  }
+                }),
+                _vm._v(" "),
+                _vm.url3 ? _c("p", [_vm._v("Upload Terbaru")]) : _vm._e(),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "img-thumbnail",
+                  attrs: { src: _vm.url3, alt: "" }
                 })
               ])
             ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("Show Section 3")]),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.datas.section_3_show,
+                    expression: "datas.section_3_show"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { name: "", id: "" },
+                on: {
+                  change: function($event) {
+                    var $$selectedVal = Array.prototype.filter
+                      .call($event.target.options, function(o) {
+                        return o.selected
+                      })
+                      .map(function(o) {
+                        var val = "_value" in o ? o._value : o.value
+                        return val
+                      })
+                    _vm.$set(
+                      _vm.datas,
+                      "section_3_show",
+                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                    )
+                  }
+                }
+              },
+              [
+                _c(
+                  "option",
+                  {
+                    attrs: { value: "1" },
+                    domProps: { selected: _vm.datas.section_3_show == 1 }
+                  },
+                  [_vm._v("Show")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "option",
+                  {
+                    attrs: { value: "0" },
+                    domProps: { selected: _vm.datas.section_3_show == 0 }
+                  },
+                  [_vm._v("Hide")]
+                )
+              ]
+            )
           ]),
           _vm._v(" "),
           _c("button", { staticClass: "btn btn-success mt-3" }, [

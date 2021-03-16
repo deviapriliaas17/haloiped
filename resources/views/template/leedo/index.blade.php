@@ -321,7 +321,7 @@
 	</section>
 	@endif
 	<!--Core Features 02-->
-	@if($content->section_4_show && $skills->count() == 4)
+	@if($content->section_4_show && $jobtypes->count() == 4)
 		<section class="position-relative overflow-hidden">
 			<!--Particle-->
 			<div class="vlt-particle" data-jarallax-element="100 0" style="bottom: -50px; right: -40px; max-width: 250px;"><img src="{{ asset('template/leedo/assets/img/root/particle-01--black.png')}}" alt=""></div>
@@ -343,7 +343,7 @@
 					</div>
 				</div>
 				<div class="row">
-					@foreach($skills as $s)
+					@foreach($jobtypes as $j)
 						<div class="col-md-4">
 							<!--Animation Block-->
 							<div class="vlt-animation-block" data-aos="fade" data-aos-delay="0">
@@ -351,9 +351,9 @@
 								<div class="vlt-services vlt-services--left">
 									<div class="vlt-services__icon"><i class="leedo-paint-bucket"></i></div>
 									<div class="vlt-services__content">
-										<h4 class="vlt-services__title"><span class="vlt-highlight">{{ $s->name }}</span>
+										<h4 class="vlt-services__title"><span class="vlt-highlight">{{ $j->name }}</span>
 										</h4>
-										<p class="vlt-services__text">{{ $s->description }}
+										<p class="vlt-services__text">{{ $j->description }}
 										</p>
 									</div>
 								</div>

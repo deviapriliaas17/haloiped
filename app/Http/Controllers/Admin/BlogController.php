@@ -50,8 +50,7 @@ class BlogController extends Controller
         ], 200);
     }
     public function CreateBlog(Request $request)
-    {
-        
+    {   
         $image = $this->saveImage($request->file('image'));
         blog::create([
             'title' => $request->title,
@@ -59,7 +58,7 @@ class BlogController extends Controller
             'image' => $image,
             'published_at' => $request->publish,
             'category_id' => $request->category_id,
-            'user_id' => Auth::user()->first->id,
+            'user_id' => auth()->user()->id,
             'slug' => str::slug($request->title,"-").rand(0,10000)
         ]);
 

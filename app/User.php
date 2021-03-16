@@ -28,7 +28,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token','id'
+        'password', 'remember_token'
     ];
     protected $appends=['key'];
     /**
@@ -39,16 +39,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    public function user()
-    {
-        return $this->hasOne('App\blog','user_id','id');
-    }
     public function profile()
     {
         return $this->hasOne('App\profile');
     }
-
     public function blog()
     {
         return $this->hasMany('App\blog');

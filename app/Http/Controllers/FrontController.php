@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\HomePage as home;
-use App\{User, skill, focus, BlogPage, AboutPage, blog};
+use App\{User, skill, focus, BlogPage, AboutPage, blog, jobtype as type};
 use Auth;
 
 class FrontController extends Controller
@@ -25,12 +25,14 @@ class FrontController extends Controller
         $focus = json_decode($focuses, true);
         $blogs = blog::all();
         $skills = skill::limit(4)->get();
-        return view('template/'.$this->template.'/index', compact('content','skills','focus','blogs','skills'));
+        $jobtypes = type::orderBy('position','DESC')->get();
+        return view('template/'.$this->template.'/index', compact('content','skills','focus','blogs','skills','jobtypes'));
     }
     public function about()
     {
         $content = AboutPage::find(1);
+        $jobtypes = type::orderBy('position','DESC')->get();
 
-        return view('template/'.$this->template.'/about', compact('content'));
+        return view('template/'.$this->template.'/about', compact('content','jobtypes'));
     }
 }

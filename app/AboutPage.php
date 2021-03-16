@@ -8,10 +8,10 @@ class AboutPage extends Model
 {
     protected $fillable=[
         'section_1_header','section_1_title','section_1_description',
-        'section_1_image','section_2_title_1','section_2_desc_1','section_2_icon_1',
+        'section_1_image','section_1_show','section_2_title_1','section_2_desc_1','section_2_icon_1',
         'section_2_title_2','section_2_desc_2','section_2_icon_2',
-        'section_2_title_3','section_2_desc_3','section_2_icon_3',
-        'section_3_title','section_3_description','section_3_image',
+        'section_2_title_3','section_2_desc_3','section_2_icon_3','section_2_show',
+        'section_3_title','section_3_description','section_3_image','section_3_show',
         'title','description','keyphrase',
     ];
 
