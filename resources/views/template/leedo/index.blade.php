@@ -321,134 +321,134 @@
 	</section>
 	@endif
 	<!--Core Features 02-->
-	@if($content->section_4_show)
-	<section class="position-relative overflow-hidden">
-		<!--Particle-->
-		<div class="vlt-particle" data-jarallax-element="100 0" style="bottom: -50px; right: -40px; max-width: 250px;"><img src="{{ asset('template/leedo/assets/img/root/particle-01--black.png')}}" alt=""></div>
-		<div class="vlt-gap-120"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 offset-md-3">
+	@if($content->section_4_show && $skills->count() == 4)
+		<section class="position-relative overflow-hidden">
+			<!--Particle-->
+			<div class="vlt-particle" data-jarallax-element="100 0" style="bottom: -50px; right: -40px; max-width: 250px;"><img src="{{ asset('template/leedo/assets/img/root/particle-01--black.png')}}" alt=""></div>
+			<div class="vlt-gap-120"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 offset-md-3">
+						<!--Animation Block-->
+						<div class="vlt-animation-block" data-aos="fade" data-aos-delay="0">
+							<!--Section Title-->
+							<div class="vlt-section-title text-center">
+								<h2>{{ $content->section_4_title }}
+								</h2>
+								<p>{{ $content->section_4_header }}
+								</p>
+							</div>
+						</div>
+						<div class="vlt-gap-70"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<!--Animation Block-->
+						<div class="vlt-animation-block" data-aos="fade" data-aos-delay="0">
+							<!--Services Item-->
+							<div class="vlt-services vlt-services--left">
+								<div class="vlt-services__icon"><i class="leedo-paint-bucket"></i></div>
+								<div class="vlt-services__content">
+									<h4 class="vlt-services__title"><span class="vlt-highlight">Creative Design</span>
+									</h4>
+									<p class="vlt-services__text">Creepeth and so us land greater, dry have god called. He seas subdue waters you two saying day.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="vlt-gap-60"></div>
+					</div>
+					<div class="col-md-4">
+						<!--Animation Block-->
+						<div class="vlt-animation-block" data-aos="fade" data-aos-delay="100">
+							<!--Services Item-->
+							<div class="vlt-services vlt-services--left">
+								<div class="vlt-services__icon"><i class="leedo-view"></i></div>
+								<div class="vlt-services__content">
+									<h4 class="vlt-services__title"><span class="vlt-highlight">Clean Code</span>
+									</h4>
+									<p class="vlt-services__text">Divided their the brought blessed moving brought the called Brought so face place herb wherein.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="vlt-gap-60"></div>
+					</div>
+					<div class="col-md-4">
+						<!--Animation Block-->
+						<div class="vlt-animation-block" data-aos="fade" data-aos-delay="200">
+							<!--Services Item-->
+							<div class="vlt-services vlt-services--left">
+								<div class="vlt-services__icon"><i class="leedo-email"></i></div>
+								<div class="vlt-services__content">
+									<h4 class="vlt-services__title"><span class="vlt-highlight">Support 24/7</span>
+									</h4>
+									<p class="vlt-services__text">Subdue Days wherein beginning blessed fifth tree give, green winged female blessed Is face face.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="vlt-gap-60"></div>
+					</div>
+					<div class="col-md-4">
+						<!--Animation Block-->
+						<div class="vlt-animation-block" data-aos="fade" data-aos-delay="300">
+							<!--Services Item-->
+							<div class="vlt-services vlt-services--left">
+								<div class="vlt-services__icon"><i class="leedo-image"></i></div>
+								<div class="vlt-services__content">
+									<h4 class="vlt-services__title"><span class="vlt-highlight">Retina Ready</span>
+									</h4>
+									<p class="vlt-services__text">Appear appear rule. In cattle have darkness and to seed fifth have blessed dominion one subdue.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="vlt-gap-60--sm"></div>
+					</div>
+					<div class="col-md-4">
+						<!--Animation Block-->
+						<div class="vlt-animation-block" data-aos="fade" data-aos-delay="400">
+							<!--Services Item-->
+							<div class="vlt-services vlt-services--left">
+								<div class="vlt-services__icon"><i class="leedo-monitor"></i></div>
+								<div class="vlt-services__content">
+									<h4 class="vlt-services__title"><span class="vlt-highlight">100% Responsive</span>
+									</h4>
+									<p class="vlt-services__text">Darkness kind likeness said give male shall first creepeth moved, fruit whose third dry one.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="vlt-gap-60--sm"></div>
+					</div>
+					<div class="col-md-4">
+						<!--Animation Block-->
+						<div class="vlt-animation-block" data-aos="fade" data-aos-delay="500">
+							<!--Services Item-->
+							<div class="vlt-services vlt-services--left">
+								<div class="vlt-services__icon"><i class="leedo-resources"></i></div>
+								<div class="vlt-services__content">
+									<h4 class="vlt-services__title"><span class="vlt-highlight">Easy Customization</span>
+									</h4>
+									<p class="vlt-services__text">Third male deep creepeth they're dry said for fly have made, divide that every can't seed gathering.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="vlt-gap-70"></div>
+				<div class="text-center">
 					<!--Animation Block-->
 					<div class="vlt-animation-block" data-aos="fade" data-aos-delay="0">
-						<!--Section Title-->
-						<div class="vlt-section-title text-center">
-							<h2>{{ $content->section_4_title }}
-							</h2>
-							<p>{{ $content->section_4_header }}
-							</p>
-						</div>
-					</div>
-					<div class="vlt-gap-70"></div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<!--Animation Block-->
-					<div class="vlt-animation-block" data-aos="fade" data-aos-delay="0">
-						<!--Services Item-->
-						<div class="vlt-services vlt-services--left">
-							<div class="vlt-services__icon"><i class="leedo-paint-bucket"></i></div>
-							<div class="vlt-services__content">
-								<h4 class="vlt-services__title"><span class="vlt-highlight">Creative Design</span>
-								</h4>
-								<p class="vlt-services__text">Creepeth and so us land greater, dry have god called. He seas subdue waters you two saying day.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="vlt-gap-60"></div>
-				</div>
-				<div class="col-md-4">
-					<!--Animation Block-->
-					<div class="vlt-animation-block" data-aos="fade" data-aos-delay="100">
-						<!--Services Item-->
-						<div class="vlt-services vlt-services--left">
-							<div class="vlt-services__icon"><i class="leedo-view"></i></div>
-							<div class="vlt-services__content">
-								<h4 class="vlt-services__title"><span class="vlt-highlight">Clean Code</span>
-								</h4>
-								<p class="vlt-services__text">Divided their the brought blessed moving brought the called Brought so face place herb wherein.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="vlt-gap-60"></div>
-				</div>
-				<div class="col-md-4">
-					<!--Animation Block-->
-					<div class="vlt-animation-block" data-aos="fade" data-aos-delay="200">
-						<!--Services Item-->
-						<div class="vlt-services vlt-services--left">
-							<div class="vlt-services__icon"><i class="leedo-email"></i></div>
-							<div class="vlt-services__content">
-								<h4 class="vlt-services__title"><span class="vlt-highlight">Support 24/7</span>
-								</h4>
-								<p class="vlt-services__text">Subdue Days wherein beginning blessed fifth tree give, green winged female blessed Is face face.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="vlt-gap-60"></div>
-				</div>
-				<div class="col-md-4">
-					<!--Animation Block-->
-					<div class="vlt-animation-block" data-aos="fade" data-aos-delay="300">
-						<!--Services Item-->
-						<div class="vlt-services vlt-services--left">
-							<div class="vlt-services__icon"><i class="leedo-image"></i></div>
-							<div class="vlt-services__content">
-								<h4 class="vlt-services__title"><span class="vlt-highlight">Retina Ready</span>
-								</h4>
-								<p class="vlt-services__text">Appear appear rule. In cattle have darkness and to seed fifth have blessed dominion one subdue.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="vlt-gap-60--sm"></div>
-				</div>
-				<div class="col-md-4">
-					<!--Animation Block-->
-					<div class="vlt-animation-block" data-aos="fade" data-aos-delay="400">
-						<!--Services Item-->
-						<div class="vlt-services vlt-services--left">
-							<div class="vlt-services__icon"><i class="leedo-monitor"></i></div>
-							<div class="vlt-services__content">
-								<h4 class="vlt-services__title"><span class="vlt-highlight">100% Responsive</span>
-								</h4>
-								<p class="vlt-services__text">Darkness kind likeness said give male shall first creepeth moved, fruit whose third dry one.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="vlt-gap-60--sm"></div>
-				</div>
-				<div class="col-md-4">
-					<!--Animation Block-->
-					<div class="vlt-animation-block" data-aos="fade" data-aos-delay="500">
-						<!--Services Item-->
-						<div class="vlt-services vlt-services--left">
-							<div class="vlt-services__icon"><i class="leedo-resources"></i></div>
-							<div class="vlt-services__content">
-								<h4 class="vlt-services__title"><span class="vlt-highlight">Easy Customization</span>
-								</h4>
-								<p class="vlt-services__text">Third male deep creepeth they're dry said for fly have made, divide that every can't seed gathering.
-								</p>
-							</div>
-						</div>
+						<!--Button--><a class="vlt-btn vlt-btn--primary vlt-btn--md vlt-btn--effect" href="about-us-01.html" target="_self"><span>More About Us</span></a>
 					</div>
 				</div>
 			</div>
-			<div class="vlt-gap-70"></div>
-			<div class="text-center">
-				<!--Animation Block-->
-				<div class="vlt-animation-block" data-aos="fade" data-aos-delay="0">
-					<!--Button--><a class="vlt-btn vlt-btn--primary vlt-btn--md vlt-btn--effect" href="about-us-01.html" target="_self"><span>More About Us</span></a>
-				</div>
-			</div>
-		</div>
-		<div class="vlt-gap-120"></div>
-	</section>
+			<div class="vlt-gap-120"></div>
+		</section>
 	@endif
 
 	@if($blogs->count() > 3)
