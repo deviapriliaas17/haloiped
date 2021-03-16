@@ -24,7 +24,7 @@ class FrontController extends Controller
         $focuses= focus::whereBetween('position',['1','3'])->get();
         $focus = json_decode($focuses, true);
         $blogs = blog::all();
-        $skills = skill::limit(4);
+        $skills = skill::limit(4)->get();
         return view('template/'.$this->template.'/index', compact('content','skills','focus','blogs','skills'));
     }
     public function about()

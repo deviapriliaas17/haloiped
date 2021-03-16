@@ -31,6 +31,9 @@
                                <router-link :to="{ name: 'admin-template' }">Template</router-link>
                            </li>
                            <li class="list-group-item">
+                               <router-link :to="{ name: 'admin-job-type' }">Job Type</router-link>
+                           </li>
+                           <li class="list-group-item">
                                Gallery
                            </li>
                            <li class="list-group-item">

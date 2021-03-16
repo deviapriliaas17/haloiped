@@ -64,3 +64,8 @@ Route::get('/admin/template/{id}','TemplateController@getData');
 Route::get('/admin/template','TemplateController@index');
 Route::post('/admin/template/edit/{id}','TemplateController@edit');
 
+Route::get('/admin/job-type','JobTypeController@index');
+Route::post('/admin/job-type/create','JobTypeController@store');
+Route::get('/admin/job-type/{id}','JobTypeController@getData');
+Route::post('/admin/job-type/edit/{id}','JobTypeController@update');
+Route::post('/admin/job-type/delete/{id}','JobTypeController@destroy');

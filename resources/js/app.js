@@ -60,6 +60,9 @@ import AdminFocusEdit from './components/Admin/Focus/Edit.vue';
 import AdminTemplateCreate from './components/Admin/Template/Create.vue';
 import AdminTemplateIndex from './components/Admin/Template/Index.vue';
 import AdminTemplateEdit from './components/Admin/Template/Edit.vue';
+import AdminJobTypeCreate from './components/Admin/Job Type/Create.vue';
+import AdminJobTypeIndex from './components/Admin/Job Type/Index.vue';
+import AdminJobTypeEdit from './components/Admin/Job Type/Edit.vue';
 
 Vue.component(
     'passport-clients',
@@ -195,6 +198,21 @@ const routes = [{
         name: 'admin-template-edit',
         path: '/admin/template/:id',
         component: AdminTemplateEdit
+    },
+    {
+        name: 'admin-job-type-create',
+        path: '/admin/job-type/create',
+        component: AdminJobTypeCreate
+    },
+    {
+        name: 'admin-job-type',
+        path: '/admin/job-type',
+        component: AdminJobTypeIndex
+    },
+    {
+        name: 'admin-job-type-edit',
+        path: '/admin/job-type/edit/:id',
+        component: AdminJobTypeEdit
     }
 ];
 
